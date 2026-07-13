@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Methodology — gRank</title>
+  <title>Methodology | gRank</title>
   <meta
     name="description"
     content="How gRank discovers, transcribes, reviews, and ranks Nerd Snipe episodes."
@@ -8,11 +8,9 @@
 
 <div class="shell methodology-page">
   <header class="prose-hero">
-    <span class="eyebrow">Methodology v1.0</span>
     <h1>A small leaderboard with an unusually thorough audit trail.</h1>
     <p>
-      gRank is intentionally literal. It does not calculate a mysterious composite score. It
-      publishes two measurements derived from timestamped transcript evidence and a reproducible
+      Two literal rankings, derived from timestamped transcript evidence and a reproducible
       automated adjudication policy.
     </p>
   </header>
@@ -29,7 +27,6 @@
 
     <article class="prose">
       <section id="rankings">
-        <span class="section-number">01</span>
         <h2>The rankings</h2>
         <h3>Fastest to gstack</h3>
         <p>
@@ -47,7 +44,6 @@
       </section>
 
       <section id="sources">
-        <span class="section-number">02</span>
         <h2>Source priority</h2>
         <ol>
           <li>
@@ -65,7 +61,6 @@
       </section>
 
       <section id="detection">
-        <span class="section-number">03</span>
         <h2>Candidate detection</h2>
         <p>
           Transcript and caption tokens are normalized and searched in short windows for exact,
@@ -76,7 +71,6 @@
       </section>
 
       <section id="review">
-        <span class="section-number">04</span>
         <h2>Automated transcript consensus</h2>
         <p>
           Policy v1 accepts exact “gstack,” “g stack,” and “gee stack” candidates. It records
@@ -89,7 +83,6 @@
       </section>
 
       <section id="limits">
-        <span class="section-number">05</span>
         <h2>Snapshot limitations</h2>
         <p>
           Podcast enclosures can be replaced or receive dynamic ads. Published records therefore

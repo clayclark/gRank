@@ -30,6 +30,8 @@
     "vitest": "^4.0.9"
   },
   "dependencies": {
+    "@fontsource-variable/archivo": "^5.2.8",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1"
   },

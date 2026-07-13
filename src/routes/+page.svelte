@@ -51,25 +51,41 @@
 </script>
 
 <svelte:head>
-  <title>gRank — The Nerd Snipe gstack leaderboard</title>
-  <meta property="og:title" content="gRank — How quickly does Nerd Snipe mention gstack?" />
+  <title>gRank | The Nerd Snipe gstack leaderboard</title>
+  <meta property="og:title" content="gRank | How quickly does Nerd Snipe mention gstack?" />
+  <meta property="og:image" content="/images/grank-signal-hero.jpg" />
+  <link
+    rel="preload"
+    as="image"
+    href="/images/grank-signal-hero.avif"
+    type="image/avif"
+    fetchpriority="high"
+    media="(min-width: 721px)"
+  />
 </svelte:head>
 
 <section class="hero shell">
   <div class="hero-copy">
-    <span class="eyebrow">A highly specific podcast index</span>
     <h1>How long until they mention <em>gstack?</em></h1>
-    <p>
-      Every Nerd Snipe episode, ranked by the first audible gstack mention and the total number of
-      times it comes up.
-    </p>
+    <p>Every Nerd Snipe episode, ranked by its first transcript match and total gstack mentions.</p>
+    <a class="hero-link" href="#leaderboard-heading">Inspect the evidence</a>
   </div>
-  <aside class="hero-note">
-    <span class:live={dataset.status === 'published'}></span>
-    {dataset.status === 'published'
-      ? 'Every episode has been transcribed and automatically adjudicated.'
-      : 'The catalog is live. Transcript review is still in progress.'}
-  </aside>
+  <figure class="hero-visual">
+    <picture>
+      <source srcset="/images/grank-signal-hero.avif" type="image/avif" />
+      <img
+        src="/images/grank-signal-hero.jpg"
+        alt="A studio microphone beside transcript strips and a coral waveform ribbon"
+        width="1200"
+        height="640"
+        fetchpriority="low"
+      />
+    </picture>
+    <figcaption>
+      <span>{dataset.status === 'published' ? 'Published dataset' : 'Review in progress'}</span>
+      <strong>{dataset.episodes.length} episodes in the signal</strong>
+    </figcaption>
+  </figure>
 </section>
 
 <div class="shell">
@@ -78,7 +94,6 @@
   <section class="leaderboard-section" aria-labelledby="leaderboard-heading">
     <div class="section-heading leaderboard-heading">
       <div>
-        <span class="eyebrow">The leaderboard</span>
         <h2 id="leaderboard-heading">
           {mode === 'fastest' ? 'Fastest to gstack' : 'Most gstack'}
         </h2>
@@ -90,23 +105,23 @@
   </section>
 
   <section class="explainer">
-    <div>
-      <span class="eyebrow">Two measurements. No mystery score.</span>
+    <div class="explainer-intro">
+      <p class="kicker">Two measurements. No mystery score.</p>
       <h2>Simple enough to audit.</h2>
+      <p>
+        Each ranking can be traced to a timestamp, its transcript context, and the analyzed file.
+      </p>
     </div>
     <div class="explainer-grid">
       <article>
-        <span class="step">01</span>
         <h3>Find the first mention</h3>
-        <p>We measure from the first second of the published audio, including intros and ads.</p>
+        <p>The clock begins at the first second of the published file, including intros and ads.</p>
       </article>
       <article>
-        <span class="step">02</span>
         <h3>Count every explicit reference</h3>
         <p>Each accepted “gstack,” “g stack,” or clearly intended “gee stack” counts once.</p>
       </article>
       <article>
-        <span class="step">03</span>
         <h3>Cross-check before publishing</h3>
         <p>
           Explicit transcript matches are accepted, generic stack references are rejected, and

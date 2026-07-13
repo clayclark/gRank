@@ -38,7 +38,7 @@ export function episodeSummary(description: string): string {
   );
   const summary = normalized
     .slice(0, stop)
-    .replace(/[\s,;:–—-]+$/, '')
+    .replace(/[\s,;:\u2013\u2014-]+$/, '')
     .trim();
   return summary.length >= 20 ? summary : normalized;
 }

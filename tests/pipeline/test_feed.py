@@ -8,6 +8,6 @@ def test_parse_duration_variants():
 
 
 def test_plain_text_and_timestamp_hints():
-    value = "<p>Intro &amp; news</p><p>40:49 — GStack is actually good</p>"
-    assert plain_text(value) == "Intro & news 40:49 — GStack is actually good"
+    value = "<p>Intro &amp; news</p><p>40:49: GStack is actually good</p>"
+    assert plain_text(value) == "Intro & news 40:49: GStack is actually good"
     assert timestamp_hints(value)[0]["seconds"] == 2449

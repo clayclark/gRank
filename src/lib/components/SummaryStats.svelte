@@ -29,7 +29,7 @@
   </article>
   <article>
     <span class="stat-label">Fastest</span>
-    <strong>{fastest === null ? '—' : formatTimestamp(fastest)}</strong>
+    <strong>{fastest === null ? 'None' : formatTimestamp(fastest)}</strong>
     <span class="stat-note">first mention</span>
   </article>
   <article>

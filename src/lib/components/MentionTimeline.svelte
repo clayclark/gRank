@@ -17,12 +17,17 @@
     const separator = youtubeUrl.includes('?') ? '&' : '?';
     return `${youtubeUrl}${separator}t=${Math.floor(mention.startMs / 1000)}s`;
   }
+
+  function revealMention(id: string) {
+    const row = document.querySelector<HTMLElement>(`[data-mention-id="${id}"]`);
+    row?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    row?.focus({ preventScroll: true });
+  }
 </script>
 
 <section class="timeline-section" aria-labelledby="timeline-title">
   <div class="section-heading">
     <div>
-      <span class="eyebrow">Episode timeline</span>
       <h2 id="timeline-title">Where gstack appears</h2>
     </div>
     <span>{mentions.length} accepted {mentions.length === 1 ? 'mention' : 'mentions'}</span>
@@ -39,8 +44,9 @@
         {#each mentions as mention, index (mention.id)}
           <button
             class="marker"
-            style={`left: ${percent(mention.startMs)}%`}
+            style={`left: ${percent(mention.startMs)}%; --marker-row: ${index % 4}`}
             aria-label={`Mention ${index + 1} at ${formatTimestamp(mention.startMs)}: ${mention.publicContext}`}
+            onclick={() => revealMention(mention.id)}
           >
             <span class="marker-line"></span>
             <span class="tooltip" role="tooltip">
@@ -55,14 +61,15 @@
 
     <ol class="mention-list">
       {#each mentions as mention, index (mention.id)}
-        <li>
+        <li data-mention-id={mention.id} tabindex="-1">
           <span class="mention-index">{String(index + 1).padStart(2, '0')}</span>
           <div>
             <strong>{formatTimestamp(mention.startMs)}</strong>
             <p>{mention.publicContext}</p>
           </div>
           {#if timestampUrl(mention)}
-            <a href={timestampUrl(mention) ?? undefined} target="_blank" rel="noreferrer">Watch ↗</a
+            <a href={timestampUrl(mention) ?? undefined} target="_blank" rel="noreferrer"
+              >Watch timestamp</a
             >
           {/if}
         </li>

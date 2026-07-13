@@ -33,13 +33,13 @@
         {@const rank = metricRank(allEpisodes, episode, mode)}
         <tr class:pending={episode.review.status === 'pending'}>
           <td data-label="Rank" class="rank">
-            {rank === null ? '—' : rank}
+            {rank === null ? 'Not ranked' : rank}
           </td>
           <th scope="row" data-label="Episode">
             <a href={`/episodes/${episode.slug}`}>{episode.title}</a>
             <span class="episode-meta">
               {episode.episodeNumber !== null ? `Episode ${episode.episodeNumber}` : 'Episode'}
-              {episode.review.status === 'pending' ? ' · Pending review' : ''}
+              {episode.review.status === 'pending' ? ' / Pending review' : ''}
             </span>
           </th>
           <td data-label="Published">{formatDate(episode.publishedAt)}</td>
@@ -50,11 +50,11 @@
               : formatTimestamp(episode.metrics.firstMentionMs)}
           </td>
           <td data-label="Mentions" class="numeric"
-            >{episode.review.status === 'pending' ? '—' : episode.metrics.mentionCount}</td
+            >{episode.review.status === 'pending' ? 'Pending' : episode.metrics.mentionCount}</td
           >
           <td data-label="Per hour" class="numeric"
             >{episode.review.status === 'pending'
-              ? '—'
+              ? 'Pending'
               : formatRate(episode.metrics.mentionsPerHour)}</td
           >
         </tr>

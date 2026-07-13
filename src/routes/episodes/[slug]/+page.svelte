@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-  <title>{episode.title} — gRank</title>
+  <title>{episode.title} | gRank</title>
   <meta name="description" content={`gstack mention data for ${episode.title} from Nerd Snipe.`} />
 </svelte:head>
 
@@ -24,14 +24,14 @@
     <div>
       <span class="eyebrow">
         {episode.episodeNumber !== null ? `Episode ${episode.episodeNumber}` : 'Nerd Snipe episode'}
-        · {formatDate(episode.publishedAt)}
+        / {formatDate(episode.publishedAt)}
       </span>
       <h1>{episode.title}</h1>
       <p>{episodeSummary(episode.description ?? '')}</p>
       <div class="source-links">
-        <a href={episode.episodeUrl} target="_blank" rel="noreferrer">Listen to episode ↗</a>
+        <a href={episode.episodeUrl} target="_blank" rel="noreferrer">Listen to episode</a>
         {#if episode.youtube}
-          <a href={episode.youtube.watchUrl} target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+          <a href={episode.youtube.watchUrl} target="_blank" rel="noreferrer">Watch on YouTube</a>
         {/if}
       </div>
     </div>
@@ -44,11 +44,11 @@
     <section class="episode-metrics" aria-label="Episode ranking metrics">
       <article>
         <span>Fastest rank</span>
-        <strong>{data.fastestRank === null ? '—' : `#${data.fastestRank}`}</strong>
+        <strong>{data.fastestRank === null ? 'Not ranked' : `#${data.fastestRank}`}</strong>
       </article>
       <article>
         <span>Most mentions rank</span>
-        <strong>{data.mostRank === null ? '—' : `#${data.mostRank}`}</strong>
+        <strong>{data.mostRank === null ? 'Not ranked' : `#${data.mostRank}`}</strong>
       </article>
       <article>
         <span>First mention</span>
@@ -75,7 +75,6 @@
     />
   {:else}
     <section class="review-pending">
-      <span class="eyebrow">Analysis status</span>
       <h2>Transcript review pending</h2>
       <p>
         This episode is in the catalog, but it will not receive a rank until candidate mentions have
@@ -87,7 +86,6 @@
 
   <section class="provenance">
     <div>
-      <span class="eyebrow">Provenance</span>
       <h2>What this result is tied to</h2>
     </div>
     <dl>
@@ -109,7 +107,7 @@
       </div>
       <div>
         <dt>Audio hash</dt>
-        <dd>{episode.audio.sha256 ? `${episode.audio.sha256.slice(0, 12)}…` : 'Pending'}</dd>
+        <dd>{episode.audio.sha256 ? `${episode.audio.sha256.slice(0, 12)}...` : 'Pending'}</dd>
       </div>
       <div>
         <dt>Completed</dt>

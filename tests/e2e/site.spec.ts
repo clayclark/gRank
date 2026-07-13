@@ -1,9 +1,11 @@
 import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import type { GrankDataset } from '../../src/lib/types';
 
 test('renders and filters the leaderboard', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: /How long until they mention/ })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Dataset' })).toBeVisible();
   await expect(page.getByRole('table')).toBeVisible();
   await page.getByPlaceholder('Search episodes').fill('gstack');
   await expect(page).toHaveURL(/q=gstack/);
@@ -28,7 +30,7 @@ test('restores URL-backed ranking controls', async ({ page }) => {
 test('exposes the dataset and methodology', async ({ page, request }) => {
   const response = await request.get('/data/grank.json');
   expect(response.ok()).toBeTruthy();
-  const dataset = await response.json();
+  const dataset = (await response.json()) as GrankDataset;
   expect(dataset.source.catalogEpisodeCount).toBe(16);
   expect(dataset.status).toBe('published');
   expect(dataset.episodes.every((episode) => episode.review.status === 'complete')).toBeTruthy();
@@ -43,4 +45,10 @@ test('has no automatically detectable accessibility violations', async ({ page }
   await page.goto('/');
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);
+});
+
+test('timeline markers reveal the matching evidence row', async ({ page }) => {
+  await page.goto('/episodes/2-we-need-to-talk-about-gstack');
+  await page.getByRole('button', { name: /^Mention 1 at/ }).click();
+  await expect(page.locator('.mention-list li').first()).toBeFocused();
 });

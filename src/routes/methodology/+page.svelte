@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="shell methodology-page">
-  <header class="prose-hero">
+  <header class="method-poster">
     <h1>A small leaderboard with an unusually thorough audit trail.</h1>
     <p>
       Two literal rankings, derived from timestamped transcript evidence and a reproducible
@@ -15,36 +15,42 @@
     </p>
   </header>
 
-  <div class="method-grid">
-    <aside aria-label="On this page">
-      <strong>On this page</strong>
+  <nav class="method-index" aria-label="On this page">
+      <strong>Method atlas</strong>
       <a href="#rankings">The rankings</a>
       <a href="#sources">Sources</a>
       <a href="#detection">Detection</a>
       <a href="#review">Automated review</a>
       <a href="#limits">Limitations</a>
-    </aside>
+  </nav>
 
-    <article class="prose">
+    <article class="method-chapters">
       <section id="rankings">
-        <h2>The rankings</h2>
-        <h3>Fastest to gstack</h3>
-        <p>
-          The timer begins at <code>00:00</code> of the analyzed podcast enclosure. Intros, ads, music,
-          and pre-roll all count. The first accepted transcript reference supplies the timestamp. Episodes
-          with no accepted mention appear below mentioned episodes and display “No mention.”
-        </p>
-        <h3>Most gstack</h3>
-        <p>
-          Every distinct, explicit transcript reference counts. We accept “gstack,” “g-stack,” “g
-          stack,” possessives, and a clearly intended “gee stack.” Generic software-stack discussion
-          and pronouns do not count. Raw count determines rank; mentions per hour is secondary
-          context.
-        </p>
+        <header><h2>The rankings</h2></header>
+        <div class="ranking-definitions">
+          <div>
+            <h3>Fastest to gstack</h3>
+            <p>
+              The timer begins at <code>00:00</code> of the analyzed podcast enclosure. Intros, ads,
+              music, and pre-roll all count. The first accepted transcript reference supplies the
+              timestamp. Episodes with no accepted mention appear below mentioned episodes and
+              display “No mention.”
+            </p>
+          </div>
+          <div>
+            <h3>Most gstack</h3>
+            <p>
+              Every distinct, explicit transcript reference counts. We accept “gstack,” “g-stack,”
+              “g stack,” possessives, and a clearly intended “gee stack.” Generic software-stack
+              discussion and pronouns do not count. Raw count determines rank; mentions per hour is
+              secondary context.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="sources">
-        <h2>Source priority</h2>
+        <header><h2>Source priority</h2></header>
         <ol>
           <li>
             <strong>RSS feed:</strong> canonical episode inventory, metadata, GUIDs, and audio.
@@ -61,7 +67,7 @@
       </section>
 
       <section id="detection">
-        <h2>Candidate detection</h2>
+        <header><h2>Candidate detection</h2></header>
         <p>
           Transcript and caption tokens are normalized and searched in short windows for exact,
           phonetic, and constrained fuzzy variants. Every suspicious occurrence of “stack” enters
@@ -71,7 +77,7 @@
       </section>
 
       <section id="review">
-        <h2>Automated transcript consensus</h2>
+        <header><h2>Automated transcript consensus</h2></header>
         <p>
           Policy v1 accepts exact “gstack,” “g stack,” and “gee stack” candidates. It records
           whether MLX Whisper and YouTube captions corroborate the event, rejects generic stack,
@@ -83,7 +89,7 @@
       </section>
 
       <section id="limits">
-        <h2>Snapshot limitations</h2>
+        <header><h2>Snapshot limitations</h2></header>
         <p>
           Podcast enclosures can be replaced or receive dynamic ads. Published records therefore
           retain the analyzed file’s byte length and SHA-256 hash. Transcription models can also
@@ -100,5 +106,4 @@
         </p>
       </section>
     </article>
-  </div>
 </div>

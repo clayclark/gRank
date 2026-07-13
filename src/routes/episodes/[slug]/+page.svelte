@@ -20,8 +20,11 @@
 <div class="shell episode-page">
   <a class="back-link" href="/">← Back to leaderboard</a>
 
-  <header class="episode-header">
-    <div>
+  <header class="episode-poster">
+    {#if episode.imageUrl}
+      <div class="episode-artwork"><img src={episode.imageUrl} alt="" width="520" height="520" /></div>
+    {/if}
+    <div class="episode-title-block">
       <span class="eyebrow">
         {episode.episodeNumber !== null ? `Episode ${episode.episodeNumber}` : 'Nerd Snipe episode'}
         / {formatDate(episode.publishedAt)}
@@ -35,13 +38,10 @@
         {/if}
       </div>
     </div>
-    {#if episode.imageUrl}
-      <img src={episode.imageUrl} alt="" width="260" height="260" />
-    {/if}
   </header>
 
   {#if episode.review.status === 'complete'}
-    <section class="episode-metrics" aria-label="Episode ranking metrics">
+    <section class="episode-scoreboard" aria-label="Episode ranking metrics">
       <article>
         <span>Fastest rank</span>
         <strong>{data.fastestRank === null ? 'Not ranked' : `#${data.fastestRank}`}</strong>
@@ -50,7 +50,7 @@
         <span>Most mentions rank</span>
         <strong>{data.mostRank === null ? 'Not ranked' : `#${data.mostRank}`}</strong>
       </article>
-      <article>
+      <article class="score-feature">
         <span>First mention</span>
         <strong>{formatTimestamp(episode.metrics.firstMentionMs)}</strong>
       </article>
@@ -85,9 +85,9 @@
   {/if}
 
   <section class="provenance">
-    <div>
+    <header>
       <h2>What this result is tied to</h2>
-    </div>
+    </header>
     <dl>
       <div>
         <dt>Review</dt>

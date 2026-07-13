@@ -6,11 +6,11 @@ test('renders and filters the leaderboard', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: /How long until they mention/ })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Dataset' })).toBeVisible();
-  await expect(page.getByRole('table')).toBeVisible();
+  await expect(page.getByRole('list', { name: /episodes ranked by/i })).toBeVisible();
   await page.getByPlaceholder('Search episodes').fill('gstack');
   await expect(page).toHaveURL(/q=gstack/);
-  await expect(page.getByRole('row', { name: /We need to talk about gstack/i })).toBeVisible();
-  await expect(page.getByRole('row', { name: /Theo Almost Lost/i })).toHaveCount(0);
+  await expect(page.getByRole('listitem').filter({ hasText: /We need to talk about gstack/i })).toBeVisible();
+  await expect(page.getByRole('listitem').filter({ hasText: /Theo Almost Lost/i })).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
     await page.evaluate(() => document.documentElement.clientWidth)
   );
@@ -24,7 +24,7 @@ test('restores URL-backed ranking controls', async ({ page }) => {
   );
   await expect(page.getByPlaceholder('Search episodes')).toHaveValue('gstack');
   await expect(page.getByLabel('Filter by mention status')).toHaveValue('present');
-  await expect(page.getByRole('row', { name: /We need to talk about gstack/i })).toBeVisible();
+  await expect(page.getByRole('listitem').filter({ hasText: /We need to talk about gstack/i })).toBeVisible();
 });
 
 test('exposes the dataset and methodology', async ({ page, request }) => {

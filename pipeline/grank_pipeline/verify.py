@@ -57,6 +57,13 @@ def validate_dataset(dataset: dict) -> list[str]:
         if review.get("status") == "complete":
             if not review.get("completedAt"):
                 errors.append(f"{guid}: completed review has no completion timestamp")
+            if not review.get("method") or not review.get("policyVersion"):
+                errors.append(f"{guid}: completed review lacks method provenance")
+            evidence = review.get("evidenceSummary")
+            if not evidence:
+                errors.append(f"{guid}: completed review lacks evidence summary")
+            elif evidence.get("acceptedCount") != len(mentions):
+                errors.append(f"{guid}: accepted evidence count does not match mentions")
             if not audio.get("sha256") or audio.get("analyzedBytes") is None:
                 errors.append(f"{guid}: completed review has incomplete audio provenance")
         elif review.get("completedAt") is not None:

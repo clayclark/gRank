@@ -8,6 +8,8 @@ export interface Mention {
   detectedText: string;
   publicContext: string;
   source: 'mlx' | 'youtube' | 'metadata' | 'manual';
+  sources: ('mlx' | 'youtube' | 'metadata' | 'manual')[];
+  reviewConfidence: number;
 }
 
 export interface Episode {
@@ -36,6 +38,16 @@ export interface Episode {
   review: {
     status: ReviewStatus;
     completedAt: string | null;
+    method: 'automated-transcript-consensus' | 'human-audio' | null;
+    policyVersion: string | null;
+    evidenceSummary: {
+      candidateCount: number;
+      acceptedCount: number;
+      rejectedCount: number;
+      duplicateCount: number;
+      corroboratedAcceptedCount: number;
+      singleSourceAcceptedCount: number;
+    } | null;
     transcriptionModel: string | null;
     transcriptionConfigHash: string | null;
   };
@@ -60,6 +72,8 @@ export interface GrankDataset {
   methodology: {
     definitionVersion: string;
     detectorVersion: string;
+    reviewPolicyVersion: string;
+    reviewMethod: 'automated-transcript-consensus';
   };
   episodes: Episode[];
 }

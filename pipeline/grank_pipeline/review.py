@@ -86,5 +86,24 @@ def review_episode(guid: str) -> None:
             review["noMentionAuditComplete"] = not accepted
             review["status"] = "complete"
             review["completedAt"] = utc_now()
+            review["reviewMethod"] = "human-audio"
+            review["reviewPolicyVersion"] = "1.0.0"
+            decisions = [item["decision"] for item in review["candidates"]]
+            accepted_items = [
+                item for item in review["candidates"] if item["decision"] == "accepted"
+            ]
+            corroborated = [
+                item
+                for item in accepted_items
+                if len(set(item.get("sources") or [item.get("source")])) > 1
+            ]
+            review["evidenceSummary"] = {
+                "candidateCount": len(decisions),
+                "acceptedCount": decisions.count("accepted"),
+                "rejectedCount": decisions.count("rejected"),
+                "duplicateCount": decisions.count("duplicate"),
+                "corroboratedAcceptedCount": len(corroborated),
+                "singleSourceAcceptedCount": len(accepted_items) - len(corroborated),
+            }
             write_json(path, review)
             console.print("[green]Episode review complete.[/green]")

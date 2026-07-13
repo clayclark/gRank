@@ -17,6 +17,16 @@ function episode(guid: string, firstMentionMs: number | null, mentionCount: numb
     review: {
       status: 'complete',
       completedAt: '2026-01-02T00:00:00Z',
+      method: 'automated-transcript-consensus',
+      policyVersion: '1.0.0',
+      evidenceSummary: {
+        candidateCount: mentionCount,
+        acceptedCount: mentionCount,
+        rejectedCount: 0,
+        duplicateCount: 0,
+        corroboratedAcceptedCount: mentionCount,
+        singleSourceAcceptedCount: 0
+      },
       transcriptionModel: 'test',
       transcriptionConfigHash: 'test'
     },

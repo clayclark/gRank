@@ -67,7 +67,7 @@
   <aside class="hero-note">
     <span class:live={dataset.status === 'published'}></span>
     {dataset.status === 'published'
-      ? 'Every episode has been transcribed and manually reviewed.'
+      ? 'Every episode has been transcribed and automatically adjudicated.'
       : 'The catalog is live. Transcript review is still in progress.'}
   </aside>
 </section>
@@ -107,8 +107,11 @@
       </article>
       <article>
         <span class="step">03</span>
-        <h3>Listen before publishing</h3>
-        <p>Transcripts generate candidates. A human confirms the audio and exact timestamp.</p>
+        <h3>Cross-check before publishing</h3>
+        <p>
+          Explicit transcript matches are accepted, generic stack references are rejected, and
+          overlapping caption evidence is retained as provenance.
+        </p>
       </article>
     </div>
   </section>

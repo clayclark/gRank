@@ -21,8 +21,18 @@
       },
       "publishedAt": "2026-07-09T18:11:26Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 0,
+          "candidateCount": 1,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 0,
+          "rejectedCount": 1,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -49,16 +59,87 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Fable-Is-Back---kinda-e3lq3rm",
       "guid": "bc26c654-caf2-4571-b69b-449da9046d06",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "g stack",
+          "endMs": 1107360,
+          "id": "d23d7b93753b266672b7",
+          "publicContext": "about that in the past with like the g stack stuff and all that Speaking of which gary",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 1106900
+        },
+        {
+          "detectedText": "g stack",
+          "endMs": 1136640,
+          "id": "db74e0e72cc279b22ad0",
+          "publicContext": "shirt that says I got ai psychosis from g stack Standing next to the deity himself the creator",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 1136100
+        },
+        {
+          "detectedText": "g stack.",
+          "endMs": 1139580,
+          "id": "641593763d53f80b05e4",
+          "publicContext": "next to the deity himself the creator of g stack. I i'm gonna push back a little bit",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 1139180
+        },
+        {
+          "detectedText": "g stack",
+          "endMs": 4427440,
+          "id": "3ea9671738a00edf9562",
+          "publicContext": "shirt I am not I will wear the g stack shirt This is your punishment for being sonnet",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4426880
+        },
+        {
+          "detectedText": "g stack",
+          "endMs": 4529680,
+          "id": "1477c48d50ef2e76245d",
+          "publicContext": "imagined I mean like the ai psychosis from g stack t -shirt is pretty bad The g shirt",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4529160
+        },
+        {
+          "detectedText": "g stack",
+          "endMs": 4543280,
+          "id": "1aa259916da26bc9883f",
+          "publicContext": "is the g shirt is unworthy of the g stack Oh, even better it didn't bother aligning it",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4542740
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 1106900,
+        "mentionCount": 6,
+        "mentionsPerHour": 4.684
       },
       "publishedAt": "2026-07-08T14:17:50Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 6,
+          "candidateCount": 6,
+          "corroboratedAcceptedCount": 6,
+          "duplicateCount": 0,
+          "rejectedCount": 0,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -85,16 +166,37 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/GPT-5-6-is-here--And-none-of-us-can-use-it-e3lfk4g",
       "guid": "f30043f1-367d-4ef6-a474-4cb886b716fc",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "G stack",
+          "endMs": 1379620,
+          "id": "01a0f238debbe6a422b0",
+          "publicContext": "into a Legendary repo Like you know The G stack repo And you just see Claude for all",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 1378940
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 1378940,
+        "mentionCount": 1,
+        "mentionsPerHour": 0.839
       },
       "publishedAt": "2026-06-30T22:17:56Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 1,
+          "candidateCount": 1,
+          "corroboratedAcceptedCount": 1,
+          "duplicateCount": 0,
+          "rejectedCount": 0,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -129,8 +231,18 @@
       },
       "publishedAt": "2026-06-24T01:01:58Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 0,
+          "candidateCount": 0,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 0,
+          "rejectedCount": 0,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -165,8 +277,18 @@
       },
       "publishedAt": "2026-06-15T06:11:32Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 0,
+          "candidateCount": 2,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 0,
+          "rejectedCount": 2,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -193,16 +315,77 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Now-even-Googles-buying-GPUs-from-SpaceX-e3khqcc",
       "guid": "9622fbee-4e5a-4bed-b2b1-efd7c9c68a9f",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "G stack",
+          "endMs": 5217980,
+          "id": "ef4e1ba6bd3a296a8140",
+          "publicContext": "really pioneered this and is generational at this G stack this is the G stack philosophy brought into",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5217140
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 5219800,
+          "id": "eb2b2b9569d07119b845",
+          "publicContext": "generational at this? G stack. This is the G stack philosophy brought into the Hermes agents cuz that",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5219160
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 5224080,
+          "id": "89ca487053be9990b479",
+          "publicContext": "into the Hermes agents cuz that is what G stack is. It is encoding workflows and steps within",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5223680
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 5301880,
+          "id": "839b0a3cc31738db2a1a",
+          "publicContext": "podcast episodes by how long it takes for G stack to first come up and how often it",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5301480
+        },
+        {
+          "detectedText": "G stack,",
+          "endMs": 5317440,
+          "id": "251f1a244d5fd72dff20",
+          "publicContext": "are proud of me. I don't actually use G stack, I want to be clear. I think it's",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5316960
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 5217140,
+        "mentionCount": 5,
+        "mentionsPerHour": 3.15
       },
       "publishedAt": "2026-06-10T23:06:27Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 5,
+          "candidateCount": 12,
+          "corroboratedAcceptedCount": 5,
+          "duplicateCount": 0,
+          "rejectedCount": 7,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -229,16 +412,37 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/We-mostly-like-Claude-Opus-4-8-e3k7p8u",
       "guid": "86f2bf9f-6620-4a29-87fd-20b8517e3769",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "G Stack.",
+          "endMs": 5760,
+          "id": "cefdda90c1634198744d",
+          "publicContext": "I figured out. Like I figured out the G Stack. This just means your showers aren't long enough.",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4720
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 4720,
+        "mentionCount": 1,
+        "mentionsPerHour": 0.799
       },
       "publishedAt": "2026-06-03T02:10:46Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 1,
+          "candidateCount": 1,
+          "corroboratedAcceptedCount": 1,
+          "duplicateCount": 0,
+          "rejectedCount": 0,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -273,8 +477,18 @@
       },
       "publishedAt": "2026-05-28T04:17:07Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 0,
+          "candidateCount": 0,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 0,
+          "rejectedCount": 0,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -309,8 +523,18 @@
       },
       "publishedAt": "2026-05-20T03:50:34Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 0,
+          "candidateCount": 8,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 0,
+          "rejectedCount": 8,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -337,16 +561,37 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Anthropic-solved-their-compute-problem-by-buying-it-from-Elon-e3jbd9g",
       "guid": "e550ed18-cfb5-4eab-9e9b-d177bd97e9ed",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "G stack",
+          "endMs": 215560,
+          "id": "71e3166e557462956f91",
+          "publicContext": "spinning up a new conductor instance with the G stack thing would consume 37% of your 5-hour limit",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 215000
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 215000,
+        "mentionCount": 1,
+        "mentionsPerHour": 0.623
       },
       "publishedAt": "2026-05-14T02:40:56Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 1,
+          "candidateCount": 4,
+          "corroboratedAcceptedCount": 1,
+          "duplicateCount": 0,
+          "rejectedCount": 3,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -373,16 +618,337 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Theo-Almost-Lost-1-Million-e3iuh66",
       "guid": "104b021c-7e69-4154-8257-211538936de1",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/45723160/45723160-1778022626954-a50be5ae196e9.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "G -Stack",
+          "endMs": 3646220,
+          "id": "f0bb635a38b952d294b0",
+          "publicContext": "already seen you lobotomize half your devices with G -Stack and G -Brain. Oh, that was beautiful last",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3645680
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 3675320,
+          "id": "69b329676c58575596dc",
+          "publicContext": "he had heard that Conductor comes with a G -Stack button and was so excited. I had to",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3674820
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 3681020,
+          "id": "7f541a1f4503e4b007f9",
+          "publicContext": "is way too funny. Like Conductor having a G -Stack button is way too funny to not try",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3680560
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 3687140,
+          "id": "3e54daa10185193b67eb",
+          "publicContext": "raised more money if we had put a G -Stack button in by now? God, you should put",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3686860
+        },
+        {
+          "detectedText": ">> Gstack",
+          "endMs": 4098000,
+          "id": "1f756047a95e90bd9f2a",
+          "publicContext": "running your life now. >> What are the other >> Gstack Gbrain and now you have >> I'm not actually",
+          "reviewConfidence": 0.97,
+          "source": "youtube",
+          "sources": ["youtube"],
+          "startMs": 4097440
+        },
+        {
+          "detectedText": "G -Stack.",
+          "endMs": 4101100,
+          "id": "8e95c0d3d623c5e1e2ae",
+          "publicContext": "you have OpenClock.  I'm not actually using G -Stack. You didn't finish your story installing it in",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4100580
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 4119820,
+          "id": "ae8e42eb3183a889d276",
+          "publicContext": "effectively what happened is we spun up the G -Stack mode within Conductor. It created a brand new",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4119060
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 4141960,
+          "id": "1fee716ebdab6e13f2ac",
+          "publicContext": "see what happened. Running slash office hours, the G -Stack skill on an empty repo went through 37",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4141460
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4199980,
+          "id": "f37f76b47cfe6b33b942",
+          "publicContext": "name it that. And it was, we put GStack in an empty directory and it used 37",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4199500
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4205860,
+          "id": "a0e1043b82fd681f0952",
+          "publicContext": "Conductor. That just writes itself. Did it add GStack in the .clod in that project or did",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4205500
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4235420,
+          "id": "8d58130e34ec03193622",
+          "publicContext": ".clod for some reason. So it started injecting GStack nonsense into factory while I was trying to",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4234960
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4244020,
+          "id": "9393c4cc01ebd31acc24",
+          "publicContext": "just wiped it. I mean, we've talked about GStack before. Like I do, I do actually defend",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4243600
+        },
+        {
+          "detectedText": "GStack.",
+          "endMs": 4247260,
+          "id": "2ef4a2476bbb21770699",
+          "publicContext": "before. Like I do, I do actually defend GStack. I do think it is, it is directionally",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4246820
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4285240,
+          "id": "981606d4de44224d65ef",
+          "publicContext": "That is an, I got AI psychosis from GStack shirt for those listening via audio right now.",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4284660
+        },
+        {
+          "detectedText": "G -Stack.",
+          "endMs": 4396060,
+          "id": "beaf9dcbc8db104d1961",
+          "publicContext": "We'll start with the ultimate one, which is G -Stack. G -Stack is the thing that convinced me",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4395440
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 4396720,
+          "id": "2b33786675ada1b070f3",
+          "publicContext": "with the ultimate one, which is G -Stack. G -Stack is the thing that convinced me to let",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4396180
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 4427440,
+          "id": "b69c5f8b1a6d826addbb",
+          "publicContext": "in and you look at one of the G -Stack skills, they include gigantic shell scripts that look",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4427060
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4574600,
+          "id": "497678c7dee4e706c10c",
+          "publicContext": "a skill which is the general principle behind GStack and the more I have thought about this",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4573760
+        },
+        {
+          "detectedText": "GStack.",
+          "endMs": 4677600,
+          "id": "1ad0618c964090436567",
+          "publicContext": "and it is built in the style of GStack. That is why I think GStack is really",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4676960
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4678719,
+          "id": "5231f4145afa89846dda",
+          "publicContext": "style of GStack. That is why I think GStack is really cool cuz this is a really",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4678239
+        },
+        {
+          "detectedText": "GStack.",
+          "endMs": 4689820,
+          "id": "fb9f5d97844fc5e15b50",
+          "publicContext": "only seeing through the lens of Gary and GStack. Sure. This counts. This absolutely counts. You were",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 4689260
+        },
+        {
+          "detectedText": "GStack.",
+          "endMs": 4716940,
+          "id": "93ff3d0d15d82b0f8033",
+          "publicContext": "It'll be great. That is my spiel on GStack. It's good. I want to hear about Gbrain",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4716540
+        },
+        {
+          "detectedText": "G -Stack.",
+          "endMs": 4811500,
+          "id": "d6cfa7446c8b39e7c687",
+          "publicContext": "he stole my fucking beer. You're drunk on G -Stack. You don't need this. True. Who needs alcohol",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4811020
+        },
+        {
+          "detectedText": "G -Stack?",
+          "endMs": 4815540,
+          "id": "4e859ae4af124388384f",
+          "publicContext": "this. True. Who needs alcohol when you have G -Stack? The point is I love 5 .5 because",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4814880
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 4973760,
+          "id": "7a655657f37caaf70606",
+          "publicContext": "I was just reading all the Gary stuff G -Stack was just like kind of a meme it",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4972940
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 5023580,
+          "id": "e1f6edebd5c2ebb1171a",
+          "publicContext": "of complaints the first time we talked about G -Stack where people had no idea what it was",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 5023180
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 5029720,
+          "id": "5aeb63fc8110b623f530",
+          "publicContext": "would really? yes quite a few comments so G -Stack for those who don't know is Gary Tan",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5028960
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 5051840,
+          "id": "b9a1b84e6c8a0bd3bae0",
+          "publicContext": "all those types of things the point of G -Stack is to create a team so to speak",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5051340
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 5058120,
+          "id": "507fc48301be173021f4",
+          "publicContext": "of it right now because I did install G -Stack a while back and keep forgetting about it",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5057700
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 5068020,
+          "id": "c6aa23fc8c92c336d2e0",
+          "publicContext": "I have to use the browser skill that G -Stack includes that is very strict and specific you",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5067140
+        },
+        {
+          "detectedText": "G -Stack",
+          "endMs": 5074040,
+          "id": "d4a0d3fdfcc2c9145058",
+          "publicContext": "other tool for checking the browser so that's G -Stack G -Brain is according to the about on",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 5073400
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 3645680,
+        "mentionCount": 31,
+        "mentionsPerHour": 17.375
       },
       "publishedAt": "2026-05-06T00:03:04Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 31,
+          "candidateCount": 32,
+          "corroboratedAcceptedCount": 28,
+          "duplicateCount": 0,
+          "rejectedCount": 1,
+          "singleSourceAcceptedCount": 3
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -417,8 +983,18 @@
       },
       "publishedAt": "2026-05-01T02:09:12Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 0,
+          "candidateCount": 1,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 0,
+          "rejectedCount": 1,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -445,16 +1021,107 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Weve-been-testing-GPT-5-5-for-a-few-weeks-now-e3icac0",
       "guid": "0be8855f-b282-4c13-8383-be39bf9d05bc",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "G stack",
+          "endMs": 665040,
+          "id": "362c3f3b7460f4ea03fc",
+          "publicContext": "Claude directory globally, there's a certain thing called G stack in there. Open Coded is not supposed to",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 664440
+        },
+        {
+          "detectedText": "G stack.",
+          "endMs": 668080,
+          "id": "73f412a4714f7be9f58b",
+          "publicContext": "Coded is not supposed to have access to G stack. I intended for that to be contained to",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 667560
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 675400,
+          "id": "576f2351a8647bfeb815",
+          "publicContext": "containment, and now there is a bunch of G stack stuff happening within my open Coded instance through",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 674880
+        },
+        {
+          "detectedText": "G stack.",
+          "endMs": 683120,
+          "id": "79fcaf113e77fc4be73c",
+          "publicContext": "funnier, there apparently is a screenshot skill within G stack. So, it found the G stack browse skill.",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 682600
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 684280,
+          "id": "dfb369ab6b681464ba6b",
+          "publicContext": "skill within G stack. So, it found the G stack browse skill. It did the thing. It took",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 683720
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 701640,
+          "id": "dbdba363fc9f55c57c33",
+          "publicContext": "config stuff, finding my Claude config, finding the G stack in the Claude config, finding the browse skill",
+          "reviewConfidence": 0.97,
+          "source": "youtube",
+          "sources": ["youtube"],
+          "startMs": 701120
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 706800,
+          "id": "4429b6adb719d5a8d4c0",
+          "publicContext": "Claude config, finding the browse skill in the G stack config, and then taking the screenshot. That is",
+          "reviewConfidence": 0.97,
+          "source": "youtube",
+          "sources": ["youtube"],
+          "startMs": 704320
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 4492660,
+          "id": "b59c435a22fb7cac2102",
+          "publicContext": "stock Pi config. And I've been doing the G stack thing where I've been building out like full",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 4492220
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 664440,
+        "mentionCount": 8,
+        "mentionsPerHour": 4.608
       },
       "publishedAt": "2026-04-23T21:00:43Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 8,
+          "candidateCount": 8,
+          "corroboratedAcceptedCount": 6,
+          "duplicateCount": 0,
+          "rejectedCount": 0,
+          "singleSourceAcceptedCount": 2
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -489,8 +1156,18 @@
       },
       "publishedAt": "2026-04-22T18:40:50Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 0,
+          "candidateCount": 2,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 0,
+          "rejectedCount": 2,
+          "singleSourceAcceptedCount": 0
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -517,16 +1194,197 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/We-need-to-talk-about-gstack-e3i16d7",
       "guid": "ac4018bf-a74f-4c8d-9f3f-c650e3915219",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "gstack",
+          "endMs": 8320,
+          "id": "1f77d3db7ad3b970b1e9",
+          "publicContext": "network where today we're gonna be talking about gstack I'm sorry, I can't do this anymore, the",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 7840
+        },
+        {
+          "detectedText": "gstack,",
+          "endMs": 74540,
+          "id": "a69ad16b66b6be257a1d",
+          "publicContext": "the mythos drama from last week And actually gstack, which like, okay, I'll be super honest, we'll",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 73940
+        },
+        {
+          "detectedText": "gstack",
+          "endMs": 125980,
+          "id": "c9ef812ce5eb853babb6",
+          "publicContext": "to insert one additional topic between mythos and gstack Uncle Bob Oh god Okay, so what actually",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 125220
+        },
+        {
+          "detectedText": "G stack,",
+          "endMs": 164959,
+          "id": "c4dfe8e30fb14cfed554",
+          "publicContext": "me going down a [ __ ] rabbit hole with G stack, which is Yeah, I think to be honest",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 164400
+        },
+        {
+          "detectedText": "g stack",
+          "endMs": 2294700,
+          "id": "ccc16c21022eae9fb0a5",
+          "publicContext": "do Oh, you just walked straight into the g stack Yeah, uh, you're probably not gonna expect this",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 2294140
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 2320560,
+          "id": "e51cd77234faca336544",
+          "publicContext": "skill and as I was going through the G stack code and the G brain code and a",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 2320080
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 2340580,
+          "id": "6c586e11b189584a278a",
+          "publicContext": "to convince you of this gary tan. Yes G stack gary. Yes, I'm the one who convinced you",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 2339720
+        },
+        {
+          "detectedText": "g stack",
+          "endMs": 2513620,
+          "id": "a293b5ae436da98d05ff",
+          "publicContext": "you Okay, so here's the thing about the g stack ecosystem of products The actual implementation of most",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 2512980
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 2566100,
+          "id": "67ecb1acc1dc9408d012",
+          "publicContext": "best place to start here is with how G stack actually works because effectively what it is under",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 2565180
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 2613640,
+          "id": "c315eb6fd2c9a025f9b2",
+          "publicContext": "I don't actually like I I wouldn't use G stack personally like it's not for me. But, what",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 2613040
+        },
+        {
+          "detectedText": "g stack",
+          "endMs": 2647100,
+          "id": "deb8d6018f28f0bf0fd0",
+          "publicContext": "how to run and set up and use g stack Instead of writing code for the office hours",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 2646480
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 3438280,
+          "id": "76336ffd7702f3205e92",
+          "publicContext": "reason why I think all of this like G stack stuff is really cool. Like the um the",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3437720
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 3495380,
+          "id": "f9bb99bc20b294ec4885",
+          "publicContext": "every day You're the one who just showed G stack motherfucker And you all see what I have",
+          "reviewConfidence": 1.0,
+          "source": "mlx",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3494620
+        },
+        {
+          "detectedText": "[ __ ] G stack",
+          "endMs": 3512480,
+          "id": "5e44e5529f73a8831426",
+          "publicContext": "[ __ ] This poor guy had to look up [ __ ] G stack all day and I had to listen to",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3511360
+        },
+        {
+          "detectedText": "G stack",
+          "endMs": 3519800,
+          "id": "d100a3f99b650ce0cc46",
+          "publicContext": "worse. >> Me. >> I don't know >> already did the G stack deep dive and I came to different conclusions",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3519320
+        },
+        {
+          "detectedText": "G stack.",
+          "endMs": 3586600,
+          "id": "dcd5b657931c4a19b9d8",
+          "publicContext": "the rant I wanted to go on about G stack. >> reminds us and keeps that in our context",
+          "reviewConfidence": 0.97,
+          "source": "youtube",
+          "sources": ["youtube"],
+          "startMs": 3582760
+        },
+        {
+          "detectedText": "G stack,",
+          "endMs": 3654040,
+          "id": "4fd3591e2c3ea3b7bae4",
+          "publicContext": "you had to spend last week going over G stack, I guess I'll take the fall on this",
+          "reviewConfidence": 1.0,
+          "source": "youtube",
+          "sources": ["mlx", "youtube"],
+          "startMs": 3653480
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 7840,
+        "mentionCount": 17,
+        "mentionsPerHour": 16.694
       },
       "publishedAt": "2026-04-18T03:12:26Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 17,
+          "candidateCount": 23,
+          "corroboratedAcceptedCount": 15,
+          "duplicateCount": 1,
+          "rejectedCount": 5,
+          "singleSourceAcceptedCount": 2
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -553,16 +1411,87 @@
       "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Anthropic-Cant-Stop-Making-Mistakes-e3hkldj",
       "guid": "c3c0ce4f-9e9e-4217-917e-615cf020ca59",
       "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
-      "mentions": [],
+      "mentions": [
+        {
+          "detectedText": "GStack?",
+          "endMs": 4614020,
+          "id": "13e4a7474aa48d1e8185",
+          "publicContext": "doesn't ship with the only skill that matters. GStack? Of course it's GStack. It's the only skill.",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 4613620
+        },
+        {
+          "detectedText": "GStack.",
+          "endMs": 4615440,
+          "id": "39fc2912727848f9de9d",
+          "publicContext": "only skill that matters. GStack? Of course it's GStack. It's the only skill. Could it be argued",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 4615020
+        },
+        {
+          "detectedText": "GStack?",
+          "endMs": 4623560,
+          "id": "5e3010869e6e14cd77d0",
+          "publicContext": "side is Pi, and the other side is GStack? Yeah, no. These two come together because you",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 4623080
+        },
+        {
+          "detectedText": "GStack.",
+          "endMs": 4643060,
+          "id": "8d768c96cf6493539835",
+          "publicContext": "wonderful piece of software because it works with GStack. Pi coming to Y Combinator soon by the",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 4642620
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4666520,
+          "id": "080c93b2dfebe5ef6b81",
+          "publicContext": "and hijack it completely. You could make a GStack agent in Pi, and it's the right foundation",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 4665920
+        },
+        {
+          "detectedText": "GStack",
+          "endMs": 4707900,
+          "id": "ae2fddb1ace05362f047",
+          "publicContext": "include Y Combinator batches being told to use GStack for hours at a time during the batch.",
+          "reviewConfidence": 0.97,
+          "source": "mlx",
+          "sources": ["mlx"],
+          "startMs": 4707360
+        }
+      ],
       "metrics": {
-        "firstMentionMs": null,
-        "mentionCount": 0,
-        "mentionsPerHour": 0.0
+        "firstMentionMs": 4613620,
+        "mentionCount": 6,
+        "mentionsPerHour": 4.402
       },
       "publishedAt": "2026-04-09T02:24:39Z",
       "review": {
-        "completedAt": null,
-        "status": "pending",
+        "completedAt": "2026-07-13T15:04:53Z",
+        "evidenceSummary": {
+          "acceptedCount": 6,
+          "candidateCount": 8,
+          "corroboratedAcceptedCount": 0,
+          "duplicateCount": 1,
+          "rejectedCount": 1,
+          "singleSourceAcceptedCount": 6
+        },
+        "method": "automated-transcript-consensus",
+        "policyVersion": "1.0.0",
+        "status": "complete",
         "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
         "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
       },
@@ -572,10 +1501,12 @@
       "youtube": null
     }
   ],
-  "generatedAt": "2026-07-12T23:33:54Z",
+  "generatedAt": "2026-07-13T15:05:14Z",
   "methodology": {
     "definitionVersion": "1.0.0",
-    "detectorVersion": "1.0.0"
+    "detectorVersion": "1.0.0",
+    "reviewMethod": "automated-transcript-consensus",
+    "reviewPolicyVersion": "1.0.0"
   },
   "schemaVersion": 1,
   "source": {
@@ -584,5 +1515,5 @@
     "feedUrl": "https://anchor.fm/s/1112097e0/podcast/rss",
     "youtubeChannelUrl": "https://www.youtube.com/channel/UC2mPtIOYm1XihpmfrJKXjMw"
   },
-  "status": "draft"
+  "status": "published"
 }

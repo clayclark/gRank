@@ -23,10 +23,12 @@
     "methodology": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["definitionVersion", "detectorVersion"],
+      "required": ["definitionVersion", "detectorVersion", "reviewPolicyVersion", "reviewMethod"],
       "properties": {
         "definitionVersion": { "type": "string" },
-        "detectorVersion": { "type": "string" }
+        "detectorVersion": { "type": "string" },
+        "reviewPolicyVersion": { "type": "string" },
+        "reviewMethod": { "const": "automated-transcript-consensus" }
       }
     },
     "episodes": {
@@ -91,10 +93,48 @@
         "review": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["status", "completedAt", "transcriptionModel", "transcriptionConfigHash"],
+          "required": [
+            "status",
+            "completedAt",
+            "method",
+            "policyVersion",
+            "evidenceSummary",
+            "transcriptionModel",
+            "transcriptionConfigHash"
+          ],
           "properties": {
             "status": { "enum": ["pending", "complete"] },
             "completedAt": { "type": ["string", "null"], "format": "date-time" },
+            "method": {
+              "type": ["string", "null"],
+              "enum": ["automated-transcript-consensus", "human-audio", null]
+            },
+            "policyVersion": { "type": ["string", "null"] },
+            "evidenceSummary": {
+              "oneOf": [
+                { "type": "null" },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "candidateCount",
+                    "acceptedCount",
+                    "rejectedCount",
+                    "duplicateCount",
+                    "corroboratedAcceptedCount",
+                    "singleSourceAcceptedCount"
+                  ],
+                  "properties": {
+                    "candidateCount": { "type": "integer", "minimum": 0 },
+                    "acceptedCount": { "type": "integer", "minimum": 0 },
+                    "rejectedCount": { "type": "integer", "minimum": 0 },
+                    "duplicateCount": { "type": "integer", "minimum": 0 },
+                    "corroboratedAcceptedCount": { "type": "integer", "minimum": 0 },
+                    "singleSourceAcceptedCount": { "type": "integer", "minimum": 0 }
+                  }
+                }
+              ]
+            },
             "transcriptionModel": { "type": ["string", "null"] },
             "transcriptionConfigHash": { "type": ["string", "null"] }
           }
@@ -118,14 +158,30 @@
     "mention": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "startMs", "endMs", "detectedText", "publicContext", "source"],
+      "required": [
+        "id",
+        "startMs",
+        "endMs",
+        "detectedText",
+        "publicContext",
+        "source",
+        "sources",
+        "reviewConfidence"
+      ],
       "properties": {
         "id": { "type": "string", "minLength": 1 },
         "startMs": { "type": "integer", "minimum": 0 },
         "endMs": { "type": "integer", "minimum": 0 },
         "detectedText": { "type": "string" },
         "publicContext": { "type": "string" },
-        "source": { "enum": ["mlx", "youtube", "metadata", "manual"] }
+        "source": { "enum": ["mlx", "youtube", "metadata", "manual"] },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["mlx", "youtube", "metadata", "manual"] }
+        },
+        "reviewConfidence": { "type": "number", "minimum": 0, "maximum": 1 }
       }
     }
   }

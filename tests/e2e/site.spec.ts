@@ -15,20 +15,26 @@ test('renders and filters the leaderboard', async ({ page }) => {
 });
 
 test('restores URL-backed ranking controls', async ({ page }) => {
-  await page.goto('/?rank=most&q=gstack&mentions=pending');
+  await page.goto('/?rank=most&q=gstack&mentions=present');
   await expect(page.getByRole('button', { name: 'Most gstack' })).toHaveAttribute(
     'aria-pressed',
     'true'
   );
   await expect(page.getByPlaceholder('Search episodes')).toHaveValue('gstack');
-  await expect(page.getByLabel('Filter by mention status')).toHaveValue('pending');
+  await expect(page.getByLabel('Filter by mention status')).toHaveValue('present');
   await expect(page.getByRole('row', { name: /We need to talk about gstack/i })).toBeVisible();
 });
 
 test('exposes the dataset and methodology', async ({ page, request }) => {
   const response = await request.get('/data/grank.json');
   expect(response.ok()).toBeTruthy();
-  expect((await response.json()).source.catalogEpisodeCount).toBe(16);
+  const dataset = await response.json();
+  expect(dataset.source.catalogEpisodeCount).toBe(16);
+  expect(dataset.status).toBe('published');
+  expect(dataset.episodes.every((episode) => episode.review.status === 'complete')).toBeTruthy();
+  expect(
+    dataset.episodes.every((episode) => episode.review.method === 'automated-transcript-consensus')
+  ).toBeTruthy();
   await page.goto('/methodology');
   await expect(page.getByRole('heading', { name: 'Source priority' })).toBeVisible();
 });

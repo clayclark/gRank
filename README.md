@@ -32,7 +32,9 @@ pnpm build
 pnpm test:e2e
 ```
 
-The current committed `data/grank.json` is intentionally marked `draft` until all episodes have completed audio review. Pending episodes are visible but never assigned fabricated zero/no-mention rankings.
+The committed `data/grank.json` is published after reproducible automated transcript adjudication.
+No listening pass is required. Exact `gstack` forms are accepted, generic stack-family matches are
+rejected, and cross-source evidence is retained in the review records.
 
 ## Pipeline
 
@@ -43,6 +45,7 @@ uv run grank match-youtube
 uv run grank download
 uv run grank transcribe
 uv run grank detect
+uv run grank auto-review
 uv run grank review <rss-guid>
 uv run grank publish
 uv run grank verify
@@ -55,9 +58,11 @@ Use `uv run grank publish --draft` for local UI development while reviews remain
 1. RSS is the source of record for episode inventory and audio.
 2. YouTube is optional enrichment for watch links and captions.
 3. Local MLX Whisper transcription covers missing captions and supplies a second detection source.
-4. Human review is authoritative.
+4. Automated transcript consensus applies the versioned publication policy. The optional interactive
+   review command remains available for corrections.
 
-Heavy audio, model, and transcript artifacts live under `work/` and are ignored by Git. Reviewed decisions under `data/review/` and the published `data/grank.json` form the auditable record.
+Heavy audio, model, and transcript artifacts live under `work/` and are ignored by Git. Adjudicated
+decisions under `data/review/` and the published `data/grank.json` form the auditable record.
 
 ## Deployment
 

@@ -30,6 +30,9 @@ def _pending_review(guid: str) -> dict[str, Any]:
         "transcriptionConfigHash": None,
         "status": "pending",
         "completedAt": None,
+        "reviewMethod": None,
+        "reviewPolicyVersion": None,
+        "evidenceSummary": None,
         "noMentionAuditComplete": False,
         "candidates": [],
     }
@@ -71,6 +74,13 @@ def _episode(
             "source": item["source"]
             if item["source"] in {"youtube", "metadata", "manual"}
             else "mlx",
+            "sources": sorted(
+                {
+                    source if source in {"youtube", "metadata", "manual"} else "mlx"
+                    for source in item.get("sources", [item["source"]])
+                }
+            ),
+            "reviewConfidence": item.get("reviewConfidence", 1.0),
         }
         for item in accepted
     ]
@@ -96,6 +106,9 @@ def _episode(
         "review": {
             "status": review["status"],
             "completedAt": review["completedAt"],
+            "method": review.get("reviewMethod"),
+            "policyVersion": review.get("reviewPolicyVersion"),
+            "evidenceSummary": review.get("evidenceSummary"),
             "transcriptionModel": review.get("transcriptionModel"),
             "transcriptionConfigHash": review.get("transcriptionConfigHash"),
         },
@@ -150,7 +163,12 @@ def publish(allow_draft: bool = False) -> dict[str, Any]:
             "feedLastBuildDate": catalog["feed"].get("lastBuildDate"),
             "catalogEpisodeCount": len(catalog["episodes"]),
         },
-        "methodology": {"definitionVersion": "1.0.0", "detectorVersion": "1.0.0"},
+        "methodology": {
+            "definitionVersion": "1.0.0",
+            "detectorVersion": "1.0.0",
+            "reviewPolicyVersion": "1.0.0",
+            "reviewMethod": "automated-transcript-consensus",
+        },
         "episodes": episodes,
     }
     errors = validate_dataset(dataset)

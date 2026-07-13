@@ -96,6 +96,14 @@
         <dd>{episode.review.status}</dd>
       </div>
       <div>
+        <dt>Method</dt>
+        <dd>
+          {episode.review.method === 'automated-transcript-consensus'
+            ? 'Automated transcript consensus'
+            : (episode.review.method ?? 'Pending')}
+        </dd>
+      </div>
+      <div>
         <dt>Transcript</dt>
         <dd>{episode.review.transcriptionModel ?? 'Not generated'}</dd>
       </div>

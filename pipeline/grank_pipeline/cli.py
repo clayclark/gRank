@@ -6,6 +6,7 @@ import typer
 from rich.console import Console
 
 from .audio import download_catalog
+from .auto_review import auto_review_all
 from .detect import detect_all
 from .feed import sync_feed
 from .publish import publish
@@ -52,6 +53,12 @@ def detect_command() -> None:
 @app.command("review")
 def review_command(guid: str) -> None:
     review_episode(guid)
+
+
+@app.command("auto-review")
+def auto_review_command() -> None:
+    outputs = auto_review_all()
+    console.print(f"[green]Automatically adjudicated {len(outputs)} review queues.[/green]")
 
 
 @app.command("publish")

@@ -12,7 +12,8 @@
     <h1>A small leaderboard with an unusually thorough audit trail.</h1>
     <p>
       gRank is intentionally literal. It does not calculate a mysterious composite score. It
-      publishes two measurements derived from timestamped, manually accepted audio events.
+      publishes two measurements derived from timestamped transcript evidence and a reproducible
+      automated adjudication policy.
     </p>
   </header>
 
@@ -22,7 +23,7 @@
       <a href="#rankings">The rankings</a>
       <a href="#sources">Sources</a>
       <a href="#detection">Detection</a>
-      <a href="#review">Human review</a>
+      <a href="#review">Automated review</a>
       <a href="#limits">Limitations</a>
     </aside>
 
@@ -33,12 +34,12 @@
         <h3>Fastest to gstack</h3>
         <p>
           The timer begins at <code>00:00</code> of the analyzed podcast enclosure. Intros, ads, music,
-          and pre-roll all count. The first accepted audible reference supplies the timestamp. Episodes
+          and pre-roll all count. The first accepted transcript reference supplies the timestamp. Episodes
           with no accepted mention appear below mentioned episodes and display “No mention.”
         </p>
         <h3>Most gstack</h3>
         <p>
-          Every distinct, explicit audible reference counts. We accept “gstack,” “g-stack,” “g
+          Every distinct, explicit transcript reference counts. We accept “gstack,” “g-stack,” “g
           stack,” possessives, and a clearly intended “gee stack.” Generic software-stack discussion
           and pronouns do not count. Raw count determines rank; mentions per hour is secondary
           context.
@@ -76,12 +77,14 @@
 
       <section id="review">
         <span class="section-number">04</span>
-        <h2>Human review</h2>
+        <h2>Automated transcript consensus</h2>
         <p>
-          A reviewer listens around each candidate, accepts or rejects it, and corrects the
-          timestamp when necessary. An episode cannot be published as “No mention” until its broader
-          low-confidence audit is complete. Metrics are derived from accepted events and cannot be
-          edited independently.
+          Policy v1 accepts exact “gstack,” “g stack,” and “gee stack” candidates. It records
+          whether MLX Whisper and YouTube captions corroborate the event, rejects generic stack,
+          TanStack, and Substack matches, rejects metadata-only chapter hints, and collapses
+          overlapping fuzzy windows as duplicates. An episode receives “No mention” only after the
+          broader stack audit has been adjudicated. Metrics are derived from accepted events and
+          cannot be edited independently.
         </p>
       </section>
 
@@ -92,6 +95,11 @@
           Podcast enclosures can be replaced or receive dynamic ads. Published records therefore
           retain the analyzed file’s byte length and SHA-256 hash. Transcription models can also
           change; model and config provenance are attached to each completed review.
+        </p>
+        <p>
+          This policy avoids mandatory listening, but speech recognition can still miss a reference
+          or place a timestamp slightly early or late. Every accepted mention exposes its context,
+          source set, confidence, and audio provenance so corrections remain auditable.
         </p>
         <p>
           Found a mistake? Open a correction against the public review record and regenerated

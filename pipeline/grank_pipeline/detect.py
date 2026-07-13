@@ -208,6 +208,9 @@ def detect_all(catalog_path: Path = DATA_DIR / "catalog.json") -> list[Path]:
             merged.append(candidate)
         has_pending = any(item["decision"] == "pending" for item in merged)
         review_status = "pending" if has_pending else (existing or {}).get("status", "pending")
+        review_method = None if has_pending else (existing or {}).get("reviewMethod")
+        review_policy = None if has_pending else (existing or {}).get("reviewPolicyVersion")
+        evidence_summary = None if has_pending else (existing or {}).get("evidenceSummary")
         write_json(
             output,
             {
@@ -218,6 +221,9 @@ def detect_all(catalog_path: Path = DATA_DIR / "catalog.json") -> list[Path]:
                 "transcriptionConfigHash": primary.get("configHash"),
                 "status": review_status,
                 "completedAt": None if has_pending else (existing or {}).get("completedAt"),
+                "reviewMethod": review_method,
+                "reviewPolicyVersion": review_policy,
+                "evidenceSummary": evidence_summary,
                 "noMentionAuditComplete": False
                 if has_pending
                 else (existing or {}).get("noMentionAuditComplete", False),

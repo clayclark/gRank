@@ -4,7 +4,7 @@ import type { GrankDataset } from '../../src/lib/types';
 
 test('renders and filters the leaderboard', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: /How long until they mention/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Fastest to gstack' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Dataset' })).toBeVisible();
   await expect(page.getByRole('list', { name: /episodes ranked by/i })).toBeVisible();
   await page.getByPlaceholder('Search episodes').fill('gstack');

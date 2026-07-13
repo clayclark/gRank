@@ -3,11 +3,7 @@
   import '../app.css';
   let { children } = $props();
 
-  const navItems = [
-    { href: '/', label: 'Leaderboard' },
-    { href: '/methodology', label: 'Methodology' },
-    { href: '/data/grank.json', label: 'Dataset' }
-  ];
+  const navItems = [{ href: '/', label: 'Leaderboard' }];
 
   function isActive(href: string) {
     if (href === '/')
@@ -66,7 +62,13 @@
 
 <footer>
   <div class="shell footer-inner">
-    <p>An independent index of <a href="https://nerdsnipe.link/rss">Nerd Snipe</a>.</p>
-    <p>Built from timestamped transcript evidence.</p>
+    <div class="footer-copy">
+      <p>An independent index of <a href="https://nerdsnipe.link/rss">Nerd Snipe</a>.</p>
+      <p>Built from timestamped transcript evidence.</p>
+    </div>
+    <nav class="footer-links" aria-label="Supporting information">
+      <a href="/methodology">Methodology</a>
+      <a href="/data/grank.json">Dataset</a>
+    </nav>
   </div>
 </footer>

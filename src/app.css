@@ -166,12 +166,12 @@ select:focus-visible,
 .wordmark:hover .wordmark-mark {
   transform: rotate(0deg) translateY(-1px);
 }
-nav {
+.site-header nav {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-nav a {
+.site-header nav a {
   position: relative;
   padding-block: 24px;
   color: var(--ink-secondary);
@@ -180,7 +180,7 @@ nav a {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-nav a::after {
+.site-header nav a::after {
   content: '';
   position: absolute;
   right: 0;
@@ -192,12 +192,12 @@ nav a::after {
   transform-origin: right;
   transition: transform 220ms var(--ease);
 }
-nav a:hover,
-nav a.active {
+.site-header nav a:hover,
+.site-header nav a.active {
   color: var(--ink);
 }
-nav a:hover::after,
-nav a.active::after {
+.site-header nav a:hover::after,
+.site-header nav a.active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -328,6 +328,42 @@ nav a.active::after {
   grid-template-columns: 270px minmax(0, 1fr);
   gap: clamp(40px, 6vw, 96px);
   padding-block: 120px 144px;
+}
+.ranking-home {
+  padding-block: 58px 138px;
+}
+.ranking-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: clamp(48px, 8vw, 120px);
+  align-items: end;
+  padding-bottom: 44px;
+  border-bottom: 3px solid var(--ink);
+}
+.ranking-intro h1 {
+  margin: 14px 0 0;
+  font-size: clamp(3.5rem, 7vw, 7.2rem);
+  font-variation-settings: 'wght' 820;
+  line-height: 0.86;
+  letter-spacing: -0.075em;
+}
+.ranking-summary {
+  display: grid;
+  gap: 18px;
+  padding-bottom: 7px;
+}
+.ranking-summary p {
+  margin: 0;
+  max-width: 38ch;
+  color: var(--ink-secondary);
+  font-size: 0.95rem;
+}
+.ranking-summary span {
+  color: var(--muted);
+  font: 400 0.7rem var(--mono);
+}
+.ranking-home .signal-index {
+  padding-block: 48px 0;
 }
 .signal-sidebar {
   align-self: start;
@@ -580,6 +616,17 @@ footer {
   align-items: center;
   gap: 30px;
 }
+.footer-copy p { margin: 3px 0; }
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links a {
+  color: var(--ink-secondary);
+  font-variation-settings: 'wght' 650;
+  text-decoration: none;
+}
+.footer-links a:hover { color: var(--accent-ink); }
 .episode-page,
 .methodology-page {
   padding-block: 58px 120px;
@@ -1040,10 +1087,10 @@ footer {
     height: 27px;
     font-size: 1rem;
   }
-  nav {
+  .site-header nav {
     gap: 12px;
   }
-  nav a {
+  .site-header nav a {
     padding-block: 21px;
     font-size: 0.65rem;
   }
@@ -1228,7 +1275,7 @@ footer {
     overflow: hidden;
     clip: rect(0 0 0 0);
   }
-  nav {
+  .site-header nav {
     gap: 10px;
   }
 }
@@ -1290,6 +1337,17 @@ footer {
 }
 
 @media (max-width: 720px) {
+  .ranking-home { padding-block: 42px 96px; }
+  .ranking-intro {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-bottom: 32px;
+  }
+  .ranking-intro h1 {
+    font-size: clamp(3.2rem, 15vw, 4.6rem);
+  }
+  .ranking-summary { gap: 10px; padding-bottom: 0; }
+  .ranking-home .signal-index { padding-block: 34px 0; gap: 48px; }
   .signal-poster { width: 100%; border-inline: 0; }
   .poster-copy { min-height: 470px; padding: 58px 28px; }
   .poster-copy h1 { font-size: clamp(3rem, 14vw, 4.4rem); }
@@ -1347,6 +1405,8 @@ footer {
   .method-chapters section > :not(header) { grid-column: 1; grid-row: auto; }
   .method-chapters h2 { position: static; }
   .ranking-definitions { grid-template-columns: 1fr; }
+  .footer-inner { gap: 18px; }
+  .footer-links { gap: 20px; }
 }
 
 @media (forced-colors: active) {

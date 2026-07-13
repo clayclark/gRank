@@ -1,0 +1,588 @@
+{
+  "episodes": [
+    {
+      "audio": {
+        "analyzedBytes": 68415319,
+        "declaredBytes": 68415319,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/121985970/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-30%2F427080450-44100-2-9187803669357.mp3",
+        "sha256": "6d889490d951e8c2fe57f5ab32cc67f10148bdf67a19932384c8e4479a2e75e6"
+      },
+      "description": "We've spent six figures in tokens testing OpenAI's 5.6 Sol model to see whether if its better than Fable and what OpenAI have done to make it even better than 5.5. Also, we breakdown why we both moved our agents to Linux boxes, how to actually burn $65k on a single loop, and the Codex vs Claude Code subagent gap that's now bigger than the model gap itself. Thanks to this episode's sponsors Clerk and General Translation: Clerk, the auth platform with the best DX: https://nerdsnipe.link/clerk General Translation: https://nerdsnipe.link/gt Sources Available on our Substack: https://nerdsnipe.substack.com/",
+      "durationSeconds": 4275,
+      "episodeNumber": 16,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/We-Tested-GPT-5-6-Sol-Early-e3l97fi",
+      "guid": "97e35783-7dca-43b1-a73f-ceafc4e228e0",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-07-09T18:11:26Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "16-we-tested-gpt-5-6-sol-early",
+      "title": "We Tested GPT 5.6 Sol Early",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "sQ07OcRzMqo",
+        "watchUrl": "https://www.youtube.com/watch?v=sQ07OcRzMqo"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 73788603,
+        "declaredBytes": 73788603,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/122539318/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-8%2F427568061-44100-2-5c4dfbe430b1e.mp3",
+        "sha256": "8c34960e5d25b1326e13594301e2d1c5164a2f93ad3bfe1b217445e1be0fcf41"
+      },
+      "description": "Fable was supposed to give us 14 days and instead we got 3 before the export ban. Now it's back at half the rate limits. Also, we break down why AI-generated Claude Code skills fall apart, what actually triggers Fable-to-Opus rerouting, the Mythos export-control timeline, and whether GLM 5.2 can really touch Sonnet 5. Thank you to PostHog for sponsoring today's episode! PostHog, all in one suite of product tools: ⁠https://nerdsnipe.link/posthog Sources available on our Substack: https://nerdsnipe.substack.com/",
+      "durationSeconds": 4611,
+      "episodeNumber": 15,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Fable-Is-Back---kinda-e3lq3rm",
+      "guid": "bc26c654-caf2-4571-b69b-449da9046d06",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-07-08T14:17:50Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "15-fable-is-back-kinda",
+      "title": "Fable Is Back...kinda?",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "s6dgBR_02fM",
+        "watchUrl": "https://www.youtube.com/watch?v=s6dgBR_02fM"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 68692844,
+        "declaredBytes": 68692844,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/122195536/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-30%2F427099907-44100-2-b6a7368fdcddb.mp3",
+        "sha256": "398c1dcc1e3f21f5f6edda17a7e09ccf0781aa88baad1b2487d3e1a9144eaf83"
+      },
+      "description": "A new \"government-approved rollout\" for GPT-5.6 is coming, and it's got us wondering: are we entering the next dark age of AI model access? Additionally, we break down the launch of T3 Code x Grok CLI, Apple's price hikes, the memory supply crunch driving RAM and SSD costs up, a repo-poisoning and AI PR spam wave hitting open source, the GPT-5.6 non-launch, and what frontier model access looks like in a Fable/Mythos-tier world. Thank you to Composio for sponsoring this episode! Composio, connect your agents to everything: https://nerdsnipe.link/composio Sources Available on our Substack: https://nerdsnipe.substack.com/",
+      "durationSeconds": 4293,
+      "episodeNumber": 14,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/GPT-5-6-is-here--And-none-of-us-can-use-it-e3lfk4g",
+      "guid": "f30043f1-367d-4ef6-a474-4cb886b716fc",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-06-30T22:17:56Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "14-gpt-5-6-is-here-and-none-of-us-can-use-it",
+      "title": "GPT-5.6 is here! And none of us can use it.",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "5r2qi7AcEVo",
+        "watchUrl": "https://www.youtube.com/watch?v=5r2qi7AcEVo"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 89368031,
+        "declaredBytes": 89368031,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/121869126/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-23%2F426662960-44100-2-e4010a5b28a3c.mp3",
+        "sha256": "539ab687e5c9bd49baf70ab45538c766a29db8827ff20266edd530af52587f06"
+      },
+      "description": "The US government banned Anthropic's Mythos and Fable models just after launch so we break down exactly how Project Glass Wing, a panicked AWS engineer, and Dario's failure to communicate with Washington triggered the chaos. Plus: SpaceX's $60B Cursor acquisition, GLM 5.2 beating Google, the Codex trick for running 200 parallel agents, and why your next GPU will ship with a GPS tracker Thank you to Composio and WorkOS for sponsoring this episode! Composio, connect your agents to everything: https://nerdsnipe.link/composio WorkOS, your enterprise ready solution: https://nerdsnipe.link/workos Sources Available on our Substack: https://nerdsnipe.substack.com/",
+      "durationSeconds": 5585,
+      "episodeNumber": 13,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/The-US-Government-Banned-Claude-Fable-5-e3l5lc6",
+      "guid": "6bdfb818-950f-4d5e-90c5-bd2d02f144e1",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-06-24T01:01:58Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "13-the-us-government-banned-claude-fable-5",
+      "title": "The US Government Banned Claude Fable 5...",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "qfSgN9i5Fd4",
+        "watchUrl": "https://www.youtube.com/watch?v=qfSgN9i5Fd4"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 74110013,
+        "declaredBytes": 74110013,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/121410184/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-14%2F426125207-44100-2-fb677f986f04d.mp3",
+        "sha256": "dc981a1acbff9ef31af9e78772bbbe4d01424fd7a4d1ad3a1d9d0468093416fb"
+      },
+      "description": "RIP Fable 5. We recorded this before it got taken offline, but it's still worth talking about. The model is incredible. We really miss it. Thank you, Firecrawl, Depot, and Clerk for sponsoring! Firecrawl, the best api for searching and crawling the web: nerdsnipe.link/firecrawl Depot, better CI in every way: nerdsnipe.link/depot Clerk, the best dx in auth: nerdsnipe.link/clerk Sources https://x.com/thsottiaux/status/2043177597434306699 https://cognition.ai/blog/frontier-code https://x.com/paradite_/status/2064585901351792887 https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf ( page 13 has the “prompt modification” quote) https://www.anthropic.com/institute/recursive-self-improvement Timestamps 0:00 Intro 3:29 Fable First Impressions 10:24 Benchmark Drama 26:42 Claude Code & Workflows 36:07 Pricing & June 22 Cutoff 39:54 Data Retention 45:58 Hidden Safeguards 1:07:01 The Claude Constitution",
+      "durationSeconds": 4631,
+      "episodeNumber": 12,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Our-impressions-of-Claude-FableMythos-we-filmed-this-before-the-ban-e3knl68",
+      "guid": "a49e7aa0-6676-451b-8d2e-02d4e702c098",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-06-15T06:11:32Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "12-our-impressions-of-claude-fable-mythos-we-filmed-this-before-the-ban",
+      "title": "Our impressions of Claude Fable/Mythos (we filmed this before the ban)",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "V-SRz9_WqpM",
+        "watchUrl": "https://www.youtube.com/watch?v=V-SRz9_WqpM"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 91452394,
+        "declaredBytes": 91452394,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/121218892/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-10%2F425848150-44100-2-626b2c0abfb6b.mp3",
+        "sha256": "5a6c7a2fcd51083aa2dbe1ff38c53ce88d3aa1b71269f865cc94197d3c70b24a"
+      },
+      "description": "Cloudflare buys Void0, Google buying up compute from xAI, and Claude seems to be getting more anxious so we're here to break down everything this week on another episode of Nerd Snipe! Thank you to Composio for sponsoring today's episode! Composio, connect your agents to everything: https://nerdsnipe.link/composio Sources: https://x.com/vite_js/status/2062525206158078047 https://x.com/EdLudlow/status/2062970770612199542 https://x.com/nrehiew_/status/2063099050719846719 https://www.reddit.com/r/EconomyCharts/comments/1lp34n4/china_vs_us_energy/ https://x.com/elonmusk/status/1963443919150330139 https://x.com/AnthropicAI/status/2062568862479208923 https://x.com/HSVSphere/status/2060396271756595666 https://x.com/theo/status/2061018426152530232 https://x.com/Teknium/status/2062522290504613944 01:58 Cloudflare vs Vercel 13:03 Convex angle 19:59 SpaceX compute 35:49 AI self-improvement 44:45 Article reactions 50:28 Claude anxiety 57:42 Guardrails 01:08:21 Cursed image gen 01:19:18 Hermes agents",
+      "durationSeconds": 5715,
+      "episodeNumber": 11,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Now-even-Googles-buying-GPUs-from-SpaceX-e3khqcc",
+      "guid": "9622fbee-4e5a-4bed-b2b1-efd7c9c68a9f",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-06-10T23:06:27Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "11-now-even-google-s-buying-gpus-from-spacex",
+      "title": "Now even Google's buying GPUs from SpaceX?",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "zsv_F_KeG6M",
+        "watchUrl": "https://www.youtube.com/watch?v=zsv_F_KeG6M"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 72113004,
+        "declaredBytes": 72113004,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/120890078/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-2%2F425355491-44100-2-112b6a6494153.mp3",
+        "sha256": "487a6edd274c50ac4f870c9da0614270e26d414b1330bf2c04463a182e1362a1"
+      },
+      "description": "Opus 4.8 + a ton of new stuff in Claude Code dropped this week, and we actually kinda like it. There's also a new benchmark that's actually good, and we have a lot of thoughts about the future of these AI labs... Thank you PostHog and Clerk for sponsoring! PostHog, the all in one suite of product tools: nerdsnipe.link/posthog Clerk, the best dx in auth: nerdsnipe.link/clerk SOURCES https://www.anthropic.com/news/claude-opus-4-8 https://x.com/theo/status/2060120708815139241 https://x.com/Baconbrix/status/2060065875911422343 ⁠https://x.com/zoink/status/2060769829133721974 https://x.com/maria_rcks/status/2060937270824153251 https://x.com/_catwu/status/2060054180379689074 https://x.com/datacurve/status/2060834005998793199 https://deepswe.datacurve.ai/ https://deepswe.datacurve.ai/blog#results https://github.com/scaleapi/SWE-agent/blob/402a7b8fdac8193f3f255bb53859ba274234f596/config/benchmarks/anthropic_filemap_multilingual.yaml https://deepswe.datacurve.ai/ https://x.com/AnthropicAI/status/2060061347522433422 https://x.com/theo/status/2060199299632472494 https://x.com/theo/status/2060901326058561795 https://x.com/38twelveDaily/status/2060408696945975631 00:00 - Shower Thoughts 02:44 - Deep SWE Benchmark 10:45 - Opus vs GPT-5.5 19:57 - Anthropic’s Huge Raise 25:39 - Token Maxing 40:02 - AI Slot Machine 43:49 - Claude Code Friction 50:01 - Opus, Mythos, and Safety",
+      "durationSeconds": 4507,
+      "episodeNumber": 10,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/We-mostly-like-Claude-Opus-4-8-e3k7p8u",
+      "guid": "86f2bf9f-6620-4a29-87fd-20b8517e3769",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-06-03T02:10:46Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "10-we-mostly-like-claude-opus-4-8",
+      "title": "We (mostly) like Claude Opus 4.8",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "EYq1_mB-xJ4",
+        "watchUrl": "https://www.youtube.com/watch?v=EYq1_mB-xJ4"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 79472012,
+        "declaredBytes": 79472012,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/120649541/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-28%2F425033774-44100-2-4e4331d087e26.mp3",
+        "sha256": "bc5c0ca3356a4fc39f7cd1aacaf26d01652c6e74f021ee845bb60b3411a4ac55"
+      },
+      "description": "Not only did Google accidentally ban Railway's account, but their new flagship model Gemini 3.5 Flash is absurdly bad. Oh and apparently Theo's building his own cloud... Thank you Macroscope and GT for sponsoring today's episode! Macroscope: ⁠ nerdsnipe.link/macroscope General Translation: nerdsnipe.link/gt SOURCES ⁠https://x.com/theo/status/2057359424378097823⁠ ⁠https://x.com/JustJake/status/2056881510939283776⁠ ⁠https://x.com/KorduGG/status/2059141337895604626⁠ ⁠https://x.com/unboringtech/status/2059144145273491610⁠ TIMESTAMPS 00:00 - Gemini fallout 05:21 - Video gen 10:10 - Google Cloud 14:04 - Windsurf/Cursor 25:10 - Manus/Meta 30:00 - China lock-in 35:00 - Cursor/xAI 45:00 - Cloud workflows 50:32 - Lakebed 65:22 - Hermes/security",
+      "durationSeconds": 4966,
+      "episodeNumber": 9,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Google-is-Not-a-Serious-Company-e3k0ec5",
+      "guid": "07bbf672-42fd-429b-bb96-33d91fb0fbd8",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-05-28T04:17:07Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "9-google-is-not-a-serious-company",
+      "title": "Google is Not a Serious Company",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "9Ho-QNLOejI",
+        "watchUrl": "https://www.youtube.com/watch?v=9Ho-QNLOejI"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 66557909,
+        "declaredBytes": 66557909,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/120258344/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-20%2F424512803-44100-2-8d290a454985f.mp3",
+        "sha256": "8f74709c10db91ef0fefe51307f26829e295f521fa0fda9b20d11dc531f60646"
+      },
+      "description": "Peter, the creator of openclaw is apparently going through $1,300,000 worth of tokens every month. Seems like we're not using nearly enough tokens. Oh and the security psychosis is getting worse. (Anthropic is being bad again too) Thank you to today's sponsors! - AgentMail, email inboxes for your agents: nerdsnipe.link/agentmail - Clerk, the best experience for auth, orgs, billing, and more: nerdsnipe.link/clerk TIMESTAMPS 00:00 - Intro 02:44 - Token Spend 06:47 - Token Future 12:12 - Secure Agents 22:50 - Anthropic Rules 31:35 - Security 39:36 - Token Tax 49:49 - AI Psychosis 59:47 - macOS 01:01:43 - AI Video",
+      "durationSeconds": 4159,
+      "episodeNumber": 8,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/How-the-OpenClaw-creator-uses-1-3-million-of-tokens-e3jkgb8",
+      "guid": "c124ee24-a9fa-4bbd-a8f1-df3b03c447b3",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-05-20T03:50:34Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "8-how-the-openclaw-creator-uses-1-3-million-of-tokens",
+      "title": "How the OpenClaw creator uses $1.3 million of tokens",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "A3GpF_y1N0E",
+        "watchUrl": "https://www.youtube.com/watch?v=A3GpF_y1N0E"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 92541177,
+        "declaredBytes": 92541177,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/119960304/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-14%2F424114587-44100-2-d614350645e72.mp3",
+        "sha256": "0d8b2bcc4dceb29575c3add5431b1e989db881b1131b1985242e2869240d03b0"
+      },
+      "description": "Anthropic seems to have finally solved their compute problems (kinda) by buying it from Elon, the security problem is getting so much worse, and apparently Bun's getting re-written in rust? Thank you to PostHog and Composio for sponsoring today's episode! - PostHog, the all in one suite of product tools: nerdsnipe.link/posthog - Composio, connect your agents to everything: nerdsnipe.link/composio Sources/references: https://x.com/claudeai/status/2052060691893227611 https://openai.com/index/elon-musk-wanted-an-openai-for-profit/#december-2018-elon-told-us-to-raise-billions-per-year-immediately-or-forget-it https://x.com/jarredsumner/status/2053391824702898475 https://x.com/jarredsumner/status/2051595933704761618 https://x.com/jarredsumner/status/2053047748191232310 https://ze3tar.github.io/post-zcrx.html https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures https://x.com/thdxr/status/2053570581807722968 https://x.com/badlogicgames/status/2052691176373805534 https://x.com/garrytan/status/2052996691586932783 TIMESTAMPS 00:00:00 - Anthropic/xAI00:08:59 - OpenAI Lawsuit00:25:40 - Bun in Rust00:34:34 - Security00:59:28 - Pottery Coding01:11:11 - Local Models",
+      "durationSeconds": 5783,
+      "episodeNumber": 7,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Anthropic-solved-their-compute-problem-by-buying-it-from-Elon-e3jbd9g",
+      "guid": "e550ed18-cfb5-4eab-9e9b-d177bd97e9ed",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-05-14T02:40:56Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "7-anthropic-solved-their-compute-problem-by-buying-it-from-elon",
+      "title": "Anthropic solved their compute problem by buying it from Elon?",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "0EvF0jAMvX0",
+        "watchUrl": "https://www.youtube.com/watch?v=0EvF0jAMvX0"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 102775744,
+        "declaredBytes": 102775744,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/119538310/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-5%2F423544915-44100-2-2cbe06716d181.mp3",
+        "sha256": "03fc8affff5deba2180a14a40e3f0acc0cd6db5cadd3f1ddf2072a8f739af869"
+      },
+      "description": "This week Theo nearly lost a million dollars and Ben got AI psychosis (from gstack)... Thank you to Coderabbit and Clerk for sponsoring today's episode! - Coderabbit, the ultimate AI code reviewer: ⁠ nerdsnipe.link/coderabbit - Clerk, the auth platform with the best DX: nerdsnipe.link/clerk Sources/references: - https://x.com/theo/status/2014863266888233193 - https://x.com/theo/status/2050305813894648289 - https://x.com/theo/status/2050314995561611357 - https://x.com/sama/status/2050671161915371998 - https://x.com/davis7/status/2050718508372431026 - https://x.com/thdxr/status/2050719575033983323 - https://x.com/davis7/status/2050762009592148375 - https://x.com/naval/status/2050560057675522500 - https://x.com/theo/status/1952229335416623592 00:00 - Intro / studio return 00:52 - Azure $1M / Microsoft 11:22 - Cloud platform talk 18:08 - Coding agents / SDKs 29:06 - GPT-5.5 pricing debate 45:14 - OpenClaw workflows 01:12:37 - G Stack / G Brain01:29:00 - Dynamic UI / wrap-up",
+      "durationSeconds": 6423,
+      "episodeNumber": 6,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Theo-Almost-Lost-1-Million-e3iuh66",
+      "guid": "104b021c-7e69-4154-8257-211538936de1",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/45723160/45723160-1778022626954-a50be5ae196e9.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-05-06T00:03:04Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "6-theo-almost-lost-1-million",
+      "title": "Theo Almost Lost $1 Million",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "EwOu8xtErEc",
+        "watchUrl": "https://www.youtube.com/watch?v=EwOu8xtErEc"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 92097723,
+        "declaredBytes": 92097723,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/119318368/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-1%2F423242920-44100-2-902d9cb222d0c.mp3",
+        "sha256": "476f45d03809b470b17cb6c11a2d742cce8dccbd46c4037326018ea3fa0d65c9"
+      },
+      "description": "OpenAI and Microsoft are breaking up, Sam's drunk posting, Anthropic is being stupid again, and we still disagree about GPT-5.5Thanks to this episode's sponsors: - Clerk, the auth platform with the best DX: https://nerdsnipe.link/clerk - Coderabbit, the ultimate AI code reviewer: ⁠ https://nerdsnipe.link/coderabbit - PlanetScale, the fastest and most scalable cloud databases: https://nerdsnipe.link/planetscale 00:00 Intro 04:05 Sam drunk tweets1 3:13 Anthropic billing woes 28:27 OpenAI divorce 42:34 GitHub can't stop dying 59:40 GPT-5.5 retrospective Sources/references: https://x.com/sama/status/2046808114561974567 https://x.com/sama/status/2046808217133670800 https://x.com/sama/status/2048160404376105179 https://x.com/sama/status/2047403771416940715 https://x.com/om_patel5/status/2048204411986469232 https://x.com/MSFTnews/status/2048749108127506936 https://x.com/GergelyOrosz/status/2048834949667537369 https://x.com/theo/status/2047721472521621991 https://x.com/mitchellh/status/2049213597419774026 https://x.com/kdaigle/status/2047803291988590609 https://x.com/ryanflorence/status/2048538797638599109 https://x.com/davis7/status/2048239401059434710 https://x.com/davis7/status/2048077518725366173 https://x.com/badlogicgames/status/2048444292562026713 https://x.com/0xSero/status/2048744545853030690",
+      "durationSeconds": 5756,
+      "episodeNumber": 5,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/We-need-to-talk-about-OpenAI-e3inqd0",
+      "guid": "83b457d5-4984-4edd-a506-1742e123b04b",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-05-01T02:09:12Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "5-we-need-to-talk-about-openai",
+      "title": "We need to talk about OpenAI",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "3FkZDT2HWsA",
+        "watchUrl": "https://www.youtube.com/watch?v=3FkZDT2HWsA"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 100003003,
+        "declaredBytes": 100003003,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/118941504/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-23%2F422724843-44100-2-8d8469febadce.mp3",
+        "sha256": "1efd8edf5b5630b19ace25f3cfbcae46e09d3b4778274ed21d41b704d64d2300"
+      },
+      "description": "Anthropic month is finally over. We've got a ton to talk about: GPT-5.5 pre-release impressions, the Vercel hack, Cursor + xAI, Qwen models, Kimi k2.6, and so much more...Thank you to today's Sponsors! Depot, truly modern CI: nerdsnipe.link/depot Coderabbit, the ultimate AI code reviewer: nerdsnipe.link/coderabbit Clerk, the auth platform with the best DX: nerdsnipe.link/clerk TIMESTAMPS00:00:00 - Intro, vacation chaos, and episode setup 00:01:34 - Vercel hack explained and security fallout 00:05:38 - Kimi K2.6 and the rise of strong open-weight models 00:14:29 - Cursor + xAI/SpaceX partnership and acquisition option 00:37:24 - GPT Image 2 impressions, strengths, and flaws 00:43:53 - Anthropic Cloud Code Pro pricing controversy 00:49:30 - GPT-5.5 first impressions: split opinions 01:02:25 - Critiques of GPT-5.5 for coding, context, and prompting 01:22:02 - GPT-5.5 Pro",
+      "durationSeconds": 6250,
+      "episodeNumber": 4,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Weve-been-testing-GPT-5-5-for-a-few-weeks-now-e3icac0",
+      "guid": "0be8855f-b282-4c13-8383-be39bf9d05bc",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-04-23T21:00:43Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "4-we-ve-been-testing-gpt-5-5-for-a-few-weeks-now",
+      "title": "We've been testing GPT-5.5 for a few weeks now...",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "xKOUge8Uf2c",
+        "watchUrl": "https://www.youtube.com/watch?v=xKOUge8Uf2c"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 61846673,
+        "declaredBytes": 61846673,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/118872247/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-22%2F422626832-44100-2-28decf79a5ff.mp3",
+        "sha256": "c6acdef285453bcfe129a0e4cd7eedd50f9491f84466e0748e43be18d0714eda"
+      },
+      "description": "Really hope that Anthropic month is almost over. But at least for now we gotta talk about Opus 4.7, Claude Design, and much much more...Thank you to this episode's sponsor Clerk! The best DX in auth by a mile: https://nerdsnipe.link/clerkOur RSS feed: https://nerdsnipe.link/rssFollow on spotify and everywhere else you get your podcasts! https://nerdsnipe.link/podTIMESTAMPS00:00:00 Anthropic Again...00:07:30 T3 Code Banned?00:16:08 How Claude Caching Works00:24:00 Why Claude Seems Dumber00:38:03 The Conspiracies Begin...",
+      "durationSeconds": 3865,
+      "episodeNumber": 3,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Theo-gets-conspiratorial-about-Anthropic-e3ia6nn",
+      "guid": "3f5bafd8-edd9-439c-99b1-6a6acb7b3ee4",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-04-22T18:40:50Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "3-theo-gets-conspiratorial-about-anthropic",
+      "title": "Theo gets conspiratorial about Anthropic",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "QRC1ErXgmeA",
+        "watchUrl": "https://www.youtube.com/watch?v=QRC1ErXgmeA"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 58658062,
+        "declaredBytes": 58658062,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/118576999/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-16%2F422230866-44100-2-3775d31e36d81.mp3",
+        "sha256": "75c630fc2ec2cba0639a48713c7b824850093610664e4b352a2986a8db6fac2d"
+      },
+      "description": "Diving into Mythos, Claude reasoning, post-AI Uncle Bob, GStack, Thank you to today's sponsors! Coderabbit The AI code reviewer that deeply understands your codebase: ⁠https://nerdsnipe.link/coderabbit⁠ Clerk The auth platform we always either use, or regret not using: ⁠https://nerdsnipe.link/clerk 00:00:00 - Welcome to the TBPNN Show 00:02:50 - Anthropic's Mythos model 00:11:14 - Anthropic nerfed Claude's reasoning effort 00:14:20 - We should be scared of mythos 00:24:20 - Post-AI Uncle Bob 00:29:34 - Static Typing vs Dynamic Typing and Linting 00:36:23 - Claude Code Skills 00:40:49 - GStack is actually good 00:46:53 - Are we boiling in the ocean? 00:51:07 - Everything should be a md file 00:55:23 - Peace Out Nerds",
+      "durationSeconds": 3666,
+      "episodeNumber": 2,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/We-need-to-talk-about-gstack-e3i16d7",
+      "guid": "ac4018bf-a74f-4c8d-9f3f-c650e3915219",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-04-18T03:12:26Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "2-we-need-to-talk-about-gstack",
+      "title": "We need to talk about gstack",
+      "youtube": {
+        "captionSource": "youtube-automatic:en-orig",
+        "matchStatus": "automatic",
+        "videoId": "Rzi7oFTzjac",
+        "watchUrl": "https://www.youtube.com/watch?v=Rzi7oFTzjac"
+      }
+    },
+    {
+      "audio": {
+        "analyzedBytes": 78514885,
+        "declaredBytes": 78514885,
+        "enclosureUrl": "https://anchor.fm/s/1112097e0/podcast/play/118166387/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-8%2F421688073-44100-2-9a4c2a3dcff18.mp3",
+        "sha256": "baef58f5551dd1131adae0424809b27c2c79fbaea6c93716d713f3235ffe28fc"
+      },
+      "description": "Talking about everything that went wrong with Anthropic last week (source code leak, rate limits, banning openclaw, and so much more) + our new favorite coding agent Pi. Thank you to this episode's sponsors! Coderabbit The AI code reviewer that deeply understands your codebase: https://nerdsnipe.link/coderabbit Clerk The auth platform we always either use, or regret not using: https://nerdsnipe.link/clerk",
+      "durationSeconds": 4907,
+      "episodeNumber": 1,
+      "episodeUrl": "https://podcasters.spotify.com/pod/show/nerd-snipe/episodes/Anthropic-Cant-Stop-Making-Mistakes-e3hkldj",
+      "guid": "c3c0ce4f-9e9e-4217-917e-615cf020ca59",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45723160/45723160-1778025894373-b9ff7fbeab87d.jpg",
+      "mentions": [],
+      "metrics": {
+        "firstMentionMs": null,
+        "mentionCount": 0,
+        "mentionsPerHour": 0.0
+      },
+      "publishedAt": "2026-04-09T02:24:39Z",
+      "review": {
+        "completedAt": null,
+        "status": "pending",
+        "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+        "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+      },
+      "seasonNumber": 1,
+      "slug": "1-anthropic-can-t-stop-making-mistakes",
+      "title": "Anthropic Can't Stop Making Mistakes",
+      "youtube": null
+    }
+  ],
+  "generatedAt": "2026-07-12T23:33:54Z",
+  "methodology": {
+    "definitionVersion": "1.0.0",
+    "detectorVersion": "1.0.0"
+  },
+  "schemaVersion": 1,
+  "source": {
+    "catalogEpisodeCount": 16,
+    "feedLastBuildDate": "2026-07-09T18:45:51Z",
+    "feedUrl": "https://anchor.fm/s/1112097e0/podcast/rss",
+    "youtubeChannelUrl": "https://www.youtube.com/channel/UC2mPtIOYm1XihpmfrJKXjMw"
+  },
+  "status": "draft"
+}

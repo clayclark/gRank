@@ -1,0 +1,11 @@
+{
+  "audioSha256": "bc5c0ca3356a4fc39f7cd1aacaf26d01652c6e74f021ee845bb60b3411a4ac55",
+  "candidates": [],
+  "completedAt": null,
+  "guid": "07bbf672-42fd-429b-bb96-33d91fb0fbd8",
+  "noMentionAuditComplete": false,
+  "schemaVersion": 1,
+  "status": "pending",
+  "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+  "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+}

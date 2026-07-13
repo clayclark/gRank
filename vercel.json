@@ -1,0 +1,7 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "build",
+  "framework": "sveltekit",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

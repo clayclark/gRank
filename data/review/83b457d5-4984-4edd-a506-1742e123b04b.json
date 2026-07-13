@@ -1,0 +1,27 @@
+{
+  "audioSha256": "476f45d03809b470b17cb6c11a2d742cce8dccbd46c4037326018ea3fa0d65c9",
+  "candidates": [
+    {
+      "context": "thread memory, all of it in one place. Stack on top of that their CLI which makes",
+      "decision": "pending",
+      "endMs": 2480800,
+      "id": "5e1e6dbdc4910b054fe4",
+      "normalizedText": "stack",
+      "reason": "stack-audit",
+      "score": 90.91,
+      "source": "youtube",
+      "sources": ["mlx-whisper", "youtube"],
+      "startMs": 2480480,
+      "text": "Stack",
+      "tokenEndIndex": 8996,
+      "tokenStartIndex": 8996
+    }
+  ],
+  "completedAt": null,
+  "guid": "83b457d5-4984-4edd-a506-1742e123b04b",
+  "noMentionAuditComplete": false,
+  "schemaVersion": 1,
+  "status": "pending",
+  "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+  "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+}

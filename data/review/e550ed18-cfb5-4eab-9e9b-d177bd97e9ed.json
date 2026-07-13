@@ -1,0 +1,72 @@
+{
+  "audioSha256": "0d8b2bcc4dceb29575c3add5431b1e989db881b1131b1985242e2869240d03b0",
+  "candidates": [
+    {
+      "context": "spinning up a new conductor instance with the G stack thing would consume 37% of your 5-hour limit",
+      "decision": "pending",
+      "endMs": 215560,
+      "id": "71e3166e557462956f91",
+      "normalizedText": "g stack",
+      "reason": "exact",
+      "score": 100.0,
+      "source": "youtube",
+      "sources": ["mlx-whisper", "youtube"],
+      "startMs": 215000,
+      "text": "G stack",
+      "tokenEndIndex": 769,
+      "tokenStartIndex": 768
+    },
+    {
+      "context": "I don't want people to know what my stack is. >> Yeah. I have to do that [ __ ]",
+      "decision": "pending",
+      "endMs": 3534800,
+      "id": "05b72863de91f811d77b",
+      "normalizedText": "stack",
+      "reason": "stack-audit",
+      "score": 90.91,
+      "source": "youtube",
+      "sources": ["mlx-whisper", "youtube"],
+      "startMs": 3534480,
+      "text": "stack",
+      "tokenEndIndex": 12570,
+      "tokenStartIndex": 12570
+    },
+    {
+      "context": "Spotify, Apple Podcasts, and I guess we're on Substack now. Is that right? Uh yes, we are",
+      "decision": "pending",
+      "endMs": 5749400,
+      "id": "2e2404ccaa5eada7dcd6",
+      "normalizedText": "substack",
+      "reason": "stack-audit",
+      "score": 71.43,
+      "source": "youtube",
+      "sources": ["mlx-whisper", "youtube"],
+      "startMs": 5749000,
+      "text": "Substack",
+      "tokenEndIndex": 21002,
+      "tokenStartIndex": 21002
+    },
+    {
+      "context": "to start posting this. Why are we on Substack? Because it's a good place to have all",
+      "decision": "pending",
+      "endMs": 5752620,
+      "id": "51495f71672a141d1882",
+      "normalizedText": "substack",
+      "reason": "stack-audit",
+      "score": 71.43,
+      "source": "mlx-whisper",
+      "sources": ["mlx-whisper"],
+      "startMs": 5752280,
+      "text": "Substack?",
+      "tokenEndIndex": 21055,
+      "tokenStartIndex": 21055
+    }
+  ],
+  "completedAt": null,
+  "guid": "e550ed18-cfb5-4eab-9e9b-d177bd97e9ed",
+  "noMentionAuditComplete": false,
+  "schemaVersion": 1,
+  "status": "pending",
+  "transcriptionConfigHash": "2fe7ae9c053232f9b3170ede1cfd3edf26ea92809e6371dfabca62900fd31716",
+  "transcriptionModel": "mlx-community/whisper-large-v3-turbo"
+}

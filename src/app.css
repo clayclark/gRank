@@ -23,7 +23,7 @@
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   font-family: 'Archivo Variable', 'Arial Narrow', system-ui, sans-serif;
   --page: #eef0ed;
   --surface: #f7f8f5;
@@ -41,8 +41,28 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page: #111514;
+  --surface: #171c1a;
+  --surface-raised: #1d2321;
+  --ink: #edf1ee;
+  --ink-secondary: #b8c0bc;
+  --muted: #89938e;
+  --rule: #303735;
+  --rule-strong: #5a6560;
+  --accent: #f07155;
+  --accent-soft: #43251f;
+  --accent-ink: #ff9a83;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
     --page: #111514;
     --surface: #171c1a;
     --surface-raised: #1d2321;
@@ -124,6 +144,7 @@ input:focus-visible {
   min-height: 64px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .wordmark {
@@ -157,6 +178,46 @@ input:focus-visible {
 
 .wordmark:hover .wordmark-mark {
   transform: rotate(0deg) translateY(-1px);
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--ink-secondary);
+  background: color-mix(in srgb, var(--surface) 65%, transparent);
+  cursor: pointer;
+  transition:
+    color 160ms var(--ease),
+    border-color 160ms var(--ease),
+    background-color 160ms var(--ease),
+    transform 160ms var(--ease);
+}
+
+.theme-toggle:hover {
+  border-color: var(--rule-strong);
+  color: var(--ink);
+  background: var(--surface-raised);
+  transform: rotate(8deg);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.theme-toggle .theme-toggle-fill {
+  fill: currentColor;
+  stroke: none;
 }
 
 .ranking-home {

@@ -3,7 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f6f4ec" />
+    <meta name="theme-color" content="#eef0ed" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem('grank-theme');
+          const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'system';
+          const resolvedTheme =
+            theme === 'system'
+              ? matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+              : theme;
+
+          if (theme !== 'system') document.documentElement.dataset.theme = theme;
+          document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute('content', resolvedTheme === 'dark' ? '#111514' : '#eef0ed');
+        } catch {
+          // The CSS system preference remains the fallback when storage is unavailable.
+        }
+      })();
+    </script>
     %sveltekit.head%
   </head>
   <body data-sveltekit-preload-data="hover">

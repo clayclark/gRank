@@ -1,7 +1,65 @@
 <script lang="ts">
   import { onNavigate } from '$app/navigation';
+  import { onMount } from 'svelte';
   import '../app.css';
+
+  type Theme = 'system' | 'light' | 'dark';
+
   let { children } = $props();
+  let theme = $state<Theme>('system');
+
+  const nextTheme: Record<Theme, Theme> = {
+    system: 'light',
+    light: 'dark',
+    dark: 'system'
+  };
+
+  const themeName: Record<Theme, string> = {
+    system: 'System',
+    light: 'Light',
+    dark: 'Dark'
+  };
+
+  function resolvedTheme(selectedTheme: Theme) {
+    return selectedTheme === 'system'
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+      : selectedTheme;
+  }
+
+  function updateThemeColor(selectedTheme: Theme) {
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', resolvedTheme(selectedTheme) === 'dark' ? '#111514' : '#eef0ed');
+  }
+
+  function applyTheme(selectedTheme: Theme) {
+    theme = selectedTheme;
+
+    if (selectedTheme === 'system') {
+      delete document.documentElement.dataset.theme;
+      localStorage.removeItem('grank-theme');
+    } else {
+      document.documentElement.dataset.theme = selectedTheme;
+      localStorage.setItem('grank-theme', selectedTheme);
+    }
+
+    updateThemeColor(selectedTheme);
+  }
+
+  onMount(() => {
+    const savedTheme = localStorage.getItem('grank-theme');
+    theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'system';
+
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = () => {
+      if (theme === 'system') updateThemeColor('system');
+    };
+
+    systemTheme.addEventListener('change', handleSystemThemeChange);
+    return () => systemTheme.removeEventListener('change', handleSystemThemeChange);
+  });
 
   onNavigate((navigation) => {
     if (
@@ -41,8 +99,6 @@
     content="A playful leaderboard for every Nerd Snipe gstack mention."
   />
   <meta name="twitter:card" content="summary" />
-  <meta name="theme-color" content="#eef0ed" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#111514" media="(prefers-color-scheme: dark)" />
 </svelte:head>
 
 <header class="site-header">
@@ -50,6 +106,31 @@
     <a class="wordmark" href="/" aria-label="gRank home">
       <span class="wordmark-mark" aria-hidden="true">g</span><span>Rank</span>
     </a>
+    <button
+      class="theme-toggle"
+      type="button"
+      aria-label={`Theme: ${themeName[theme]}. Switch to ${themeName[nextTheme[theme]].toLowerCase()} theme`}
+      title={`Theme: ${themeName[theme]}`}
+      onclick={() => applyTheme(nextTheme[theme])}
+    >
+      {#if theme === 'light'}
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="3.5"></circle>
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+          ></path>
+        </svg>
+      {:else if theme === 'dark'}
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5 8.5 8.5 0 1 0 20.5 14.1Z"></path>
+        </svg>
+      {:else}
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5"></circle>
+          <path class="theme-toggle-fill" d="M12 3.5a8.5 8.5 0 0 0 0 17Z"></path>
+        </svg>
+      {/if}
+    </button>
   </div>
 </header>
 

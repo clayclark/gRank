@@ -1,7 +1,13 @@
 <script lang="ts">
+  import { dev } from '$app/environment';
   import { onNavigate } from '$app/navigation';
+  import { injectAnalytics } from '@vercel/analytics/sveltekit';
+  import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
   import { onMount } from 'svelte';
   import '../app.css';
+
+  injectAnalytics({ mode: dev ? 'development' : 'production' });
+  injectSpeedInsights();
 
   type Theme = 'light' | 'dark';
 

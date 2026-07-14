@@ -5,6 +5,10 @@ gRank ranks every episode of **Nerd Snipe with Theo and Ben** by:
 1. how long it takes for `gstack` to be mentioned, and
 2. how many explicit `gstack` mentions occur.
 
+Live site: [g-rank.vercel.app](https://g-rank.vercel.app)
+
+Machine-readable rankings: [g-rank.vercel.app/data/grank.json](https://g-rank.vercel.app/data/grank.json)
+
 The production site is a fully static SvelteKit build. A separate Python pipeline discovers episodes from RSS, optionally maps YouTube videos/captions, transcribes audio locally with MLX Whisper, generates review candidates, and publishes a validated JSON artifact.
 
 ## Requirements
@@ -67,3 +71,7 @@ decisions under `data/review/` and the published `data/grank.json` form the audi
 ## Deployment
 
 Vercel builds `pnpm build` and serves the static `build/` directory. The MVP uses no functions, database, scheduled jobs, or paid APIs.
+
+## License
+
+The code is available under the [MIT License](LICENSE). Podcast audio, episode metadata, and transcript excerpts remain the property of their respective owners.

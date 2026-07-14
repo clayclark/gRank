@@ -428,12 +428,15 @@ footer {
 }
 
 .footer-links a {
-  width: 36px;
   height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding-inline: 10px;
+  border-radius: 999px;
   color: var(--ink-secondary);
+  font-variation-settings: 'wght' 650;
+  text-decoration: none;
   transition:
     color 160ms ease,
     background-color 160ms ease;

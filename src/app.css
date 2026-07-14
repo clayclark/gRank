@@ -215,11 +215,6 @@ input:focus-visible {
   stroke-width: 1.8;
 }
 
-.theme-toggle .theme-toggle-fill {
-  fill: currentColor;
-  stroke: none;
-}
-
 .ranking-home {
   padding-block: 64px 112px;
 }

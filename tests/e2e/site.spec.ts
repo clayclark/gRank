@@ -41,10 +41,10 @@ test('switches and persists the theme preference', async ({ page }) => {
   await page.goto('/');
 
   const root = page.locator('html');
-  await expect(page.getByRole('button', { name: /Theme: System/i })).toBeVisible();
-  await expect(root).not.toHaveAttribute('data-theme');
+  await expect(root).toHaveAttribute('data-theme', 'dark');
+  await expect(page.getByRole('button', { name: /Theme: Dark/i })).toBeVisible();
 
-  await page.getByRole('button', { name: /Theme: System/i }).click();
+  await page.getByRole('button', { name: /Theme: Dark/i }).click();
   await expect(root).toHaveAttribute('data-theme', 'light');
   await expect(page.getByRole('button', { name: /Theme: Light/i })).toBeVisible();
   expect(await page.evaluate(() => localStorage.getItem('grank-theme'))).toBe('light');
@@ -56,11 +56,7 @@ test('switches and persists the theme preference', async ({ page }) => {
   await page.getByRole('button', { name: /Theme: Light/i }).click();
   await expect(root).toHaveAttribute('data-theme', 'dark');
   await expect(page.getByRole('button', { name: /Theme: Dark/i })).toBeVisible();
-
-  await page.getByRole('button', { name: /Theme: Dark/i }).click();
-  await expect(root).not.toHaveAttribute('data-theme');
-  await expect(page.getByRole('button', { name: /Theme: System/i })).toBeVisible();
-  expect(await page.evaluate(() => localStorage.getItem('grank-theme'))).toBeNull();
+  expect(await page.evaluate(() => localStorage.getItem('grank-theme'))).toBe('dark');
 });
 
 test('animates rank changes and preserves the episode title across navigation', async ({

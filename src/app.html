@@ -8,18 +8,17 @@
       (() => {
         try {
           const savedTheme = localStorage.getItem('grank-theme');
-          const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'system';
-          const resolvedTheme =
-            theme === 'system'
-              ? matchMedia('(prefers-color-scheme: dark)').matches
+          const theme =
+            savedTheme === 'light' || savedTheme === 'dark'
+              ? savedTheme
+              : matchMedia('(prefers-color-scheme: dark)').matches
                 ? 'dark'
-                : 'light'
-              : theme;
+                : 'light';
 
-          if (theme !== 'system') document.documentElement.dataset.theme = theme;
+          document.documentElement.dataset.theme = theme;
           document
             .querySelector('meta[name="theme-color"]')
-            ?.setAttribute('content', resolvedTheme === 'dark' ? '#111514' : '#eef0ed');
+            ?.setAttribute('content', theme === 'dark' ? '#111514' : '#eef0ed');
         } catch {
           // The CSS system preference remains the fallback when storage is unavailable.
         }

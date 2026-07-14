@@ -7,6 +7,14 @@ test('renders and searches the leaderboard', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Fastest to gstack' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Dataset' })).toHaveCount(0);
   await expect(page.getByRole('link', { name: 'Methodology' })).toHaveCount(0);
+  await expect(page.getByRole('link', { name: 'Clay Clark on GitHub' })).toHaveAttribute(
+    'href',
+    'https://github.com/clayclark'
+  );
+  await expect(page.getByRole('link', { name: 'Clay Clark on X' })).toHaveAttribute(
+    'href',
+    'https://x.com/clayboicartii'
+  );
   await expect(page.getByRole('list', { name: /episodes ranked by/i })).toBeVisible();
   await page.getByLabel('Find an episode').fill('gstack');
   await expect(page).not.toHaveURL(/q=gstack/);

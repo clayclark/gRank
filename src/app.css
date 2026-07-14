@@ -414,10 +414,40 @@ footer {
   min-height: 100px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .footer-inner p {
   margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 6px;
+}
+
+.footer-links a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink-secondary);
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.footer-links a:hover {
+  background: var(--surface-raised);
+  color: var(--ink);
+}
+
+.footer-links svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
 }
 
 .episode-page {
@@ -776,6 +806,9 @@ footer {
 
   .footer-inner {
     min-height: 88px;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 8px 24px;
   }
 
   .episode-page {

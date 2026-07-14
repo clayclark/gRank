@@ -343,6 +343,11 @@ input:focus-visible {
   letter-spacing: -0.045em;
 }
 
+.rank number-flow-svelte {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
 .episode-meta {
   color: var(--muted);
   font: 400 0.62rem/1.3 var(--mono);
@@ -357,6 +362,15 @@ input:focus-visible {
   letter-spacing: -0.033em;
   line-height: 1.1;
   text-decoration: none;
+}
+
+::view-transition-group(*) {
+  animation-duration: 360ms;
+  animation-timing-function: var(--ease);
+}
+
+::view-transition-group(root) {
+  animation-duration: 260ms;
 }
 
 .episode-metric {
@@ -832,6 +846,12 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0.01ms !important;
+  }
+
   html {
     scroll-behavior: auto;
   }

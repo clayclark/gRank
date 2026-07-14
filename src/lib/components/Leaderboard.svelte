@@ -1,4 +1,6 @@
 <script lang="ts">
+  import NumberFlow from '@number-flow/svelte';
+  import { flip } from 'svelte/animate';
   import { formatDate, formatTimestamp } from '$lib/format';
   import { metricRank } from '$lib/ranking';
   import type { Episode, RankMode } from '$lib/types';
@@ -8,6 +10,17 @@
     allEpisodes,
     mode
   }: { episodes: Episode[]; allEpisodes: Episode[]; mode: RankMode } = $props();
+
+  function flipDuration(distance: number) {
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      return 0;
+    }
+
+    return Math.min(420, Math.max(180, Math.sqrt(distance) * 28));
+  }
 </script>
 
 <div class="leaderboard-wrap">
@@ -17,14 +30,23 @@
   >
     {#each episodes as episode (episode.guid)}
       {@const rank = metricRank(allEpisodes, episode, mode)}
-      <li>
-        <span class="rank">{rank === null ? 'No gstack' : `#${rank}`}</span>
+      <li animate:flip={{ duration: flipDuration }}>
+        <span class="rank">
+          {#if rank === null}
+            No gstack
+          {:else}
+            <NumberFlow value={rank} prefix="#" willChange />
+          {/if}
+        </span>
         <div class="episode-identity">
           <span class="episode-meta">
             {episode.episodeNumber !== null ? `Episode ${episode.episodeNumber}` : 'Episode'} /
             {formatDate(episode.publishedAt)}
           </span>
-          <a href={`/episodes/${episode.slug}`}>{episode.title}</a>
+          <a
+            href={`/episodes/${episode.slug}`}
+            style:view-transition-name={`episode-${episode.slug}`}>{episode.title}</a
+          >
         </div>
         <div class:active-metric={mode === 'fastest'} class="episode-metric first-mention-metric">
           <span>First mention</span>

@@ -20,7 +20,7 @@
         {episode.episodeNumber !== null ? `Episode ${episode.episodeNumber}` : 'Nerd Snipe episode'}
         / {formatDate(episode.publishedAt)}
       </span>
-      <h1>{episode.title}</h1>
+      <h1 style:view-transition-name={`episode-${episode.slug}`}>{episode.title}</h1>
       <div class="source-links">
         <a href={episode.episodeUrl} target="_blank" rel="noreferrer">Listen to episode</a>
         {#if episode.youtube}

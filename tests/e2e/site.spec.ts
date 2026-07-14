@@ -28,6 +28,69 @@ test('restores the URL-backed ranking mode', async ({ page }) => {
   await expect(page.getByLabel('Find an episode')).toHaveValue('');
 });
 
+test('animates rank changes and preserves the episode title across navigation', async ({
+  page
+}) => {
+  await page.goto('/');
+
+  const firstResult = page.locator('.signal-list li').first();
+  await expect(firstResult).toContainText('We (mostly) like Claude Opus 4.8');
+  await expect(firstResult.locator('number-flow-svelte')).toHaveCount(1);
+
+  await page.getByRole('button', { name: 'Most gstack' }).click();
+  await expect(page).toHaveURL(/rank=most/);
+  await expect(page.locator('.signal-list li').first()).toContainText(
+    'Theo Almost Lost $1 Million'
+  );
+
+  const episodeLink = page.getByRole('link', { name: 'We need to talk about gstack' });
+  await expect(episodeLink).toHaveCSS(
+    'view-transition-name',
+    'episode-2-we-need-to-talk-about-gstack'
+  );
+  await episodeLink.click();
+
+  const episodeHeading = page.getByRole('heading', { name: 'We need to talk about gstack' });
+  await expect(episodeHeading).toBeVisible();
+  await expect(episodeHeading).toHaveCSS(
+    'view-transition-name',
+    'episode-2-we-need-to-talk-about-gstack'
+  );
+});
+
+test('honors the reduced-motion preference', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.addInitScript(() => {
+    const browserWindow = window as typeof window & { viewTransitionsStarted: number };
+    browserWindow.viewTransitionsStarted = 0;
+    Object.defineProperty(document, 'startViewTransition', {
+      configurable: true,
+      value: () => {
+        browserWindow.viewTransitionsStarted += 1;
+      }
+    });
+  });
+
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Most gstack' }).click();
+  await expect(page.locator('.signal-list li').first()).toContainText(
+    'Theo Almost Lost $1 Million'
+  );
+
+  const activeAnimations = await page
+    .locator('.signal-list li')
+    .evaluateAll((rows) => rows.reduce((count, row) => count + row.getAnimations().length, 0));
+  expect(activeAnimations).toBe(0);
+
+  await page.getByRole('link', { name: 'We need to talk about gstack' }).click();
+  await expect(page.getByRole('heading', { name: 'We need to talk about gstack' })).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => (window as typeof window & { viewTransitionsStarted: number }).viewTransitionsStarted
+    )
+  ).toBe(0);
+});
+
 test('keeps the machine-readable dataset available', async ({ request }) => {
   const response = await request.get('/data/grank.json');
   expect(response.ok()).toBeTruthy();

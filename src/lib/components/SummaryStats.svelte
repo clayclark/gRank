@@ -1,4 +1,5 @@
 <script lang="ts">
+  import NumberFlow from '@number-flow/svelte';
   import { formatTimestamp } from '$lib/format';
   import type { Episode } from '$lib/types';
 
@@ -19,7 +20,7 @@
 <section class="stats" aria-label="Leaderboard summary">
   <article>
     <span class="stat-label">Episodes with gstack</span>
-    <strong>{withMentions.length}</strong>
+    <strong><NumberFlow value={withMentions.length} /></strong>
   </article>
   <article>
     <span class="stat-label">Fastest mention</span>
@@ -27,6 +28,6 @@
   </article>
   <article>
     <span class="stat-label">Total mentions</span>
-    <strong>{totalMentions}</strong>
+    <strong><NumberFlow value={totalMentions} /></strong>
   </article>
 </section>

@@ -79,4 +79,3 @@ export interface GrankDataset {
 }
 
 export type RankMode = 'fastest' | 'most';
-export type MentionFilter = 'all' | 'present' | 'absent' | 'pending';

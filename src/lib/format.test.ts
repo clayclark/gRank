@@ -1,18 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { episodeSummary } from './format';
+import { formatDuration, formatTimestamp } from './format';
 
-describe('episodeSummary', () => {
-  it('removes sponsor copy and chapter lists from show notes', () => {
-    expect(
-      episodeSummary(
-        "A concise episode summary. Thank you to today's sponsors! Clerk https://example.com 00:40:49 - Topic"
-      )
-    ).toBe('A concise episode summary.');
+describe('time formatting', () => {
+  it('formats episode durations', () => {
+    expect(formatDuration(3723)).toBe('1:02:03');
   });
 
-  it('keeps ordinary descriptions intact', () => {
-    expect(episodeSummary('A short description with no appended boilerplate.')).toBe(
-      'A short description with no appended boilerplate.'
-    );
+  it('uses the canonical zero-result label', () => {
+    expect(formatTimestamp(null)).toBe('No gstack');
   });
 });

@@ -59,8 +59,15 @@ describe('rankEpisodes', () => {
   });
 
   it('uses competition ranks for equal metric values', () => {
-    const tied = [...episodes, episode('also-fast', 5_000, 3)];
-    expect(metricRank(tied, tied[2], 'fastest')).toBe(1);
-    expect(metricRank(tied, tied[3], 'fastest')).toBe(1);
+    const tied = [
+      episode('top', 5_000, 8),
+      episode('tie-a', 10_000, 6),
+      episode('tie-b', 10_000, 6),
+      episode('after-tie', 20_000, 4)
+    ];
+    expect(metricRank(tied, tied[1], 'fastest')).toBe(2);
+    expect(metricRank(tied, tied[2], 'fastest')).toBe(2);
+    expect(metricRank(tied, tied[3], 'fastest')).toBe(4);
+    expect(metricRank(tied, tied[3], 'most')).toBe(4);
   });
 });

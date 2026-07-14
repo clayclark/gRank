@@ -8,7 +8,7 @@ export function formatDuration(totalSeconds: number): string {
 }
 
 export function formatTimestamp(milliseconds: number | null): string {
-  if (milliseconds === null) return 'No mention';
+  if (milliseconds === null) return 'No gstack';
   return formatDuration(Math.round(milliseconds / 1000));
 }
 
@@ -19,26 +19,4 @@ export function formatDate(value: string): string {
     year: 'numeric',
     timeZone: 'UTC'
   }).format(new Date(value));
-}
-
-export function formatRate(value: number): string {
-  return value.toFixed(value >= 10 ? 0 : 1);
-}
-
-export function episodeSummary(description: string): string {
-  const normalized = description.replace(/\s+/g, ' ').trim();
-  const stopPatterns = [
-    /\bthank(?:s| you) to (?:this episode's|today's) sponsors?\b/i,
-    /\bsources available\b/i,
-    /\b\d{2}:\d{2}:\d{2}\b/
-  ];
-  const stop = Math.min(
-    ...stopPatterns.map((pattern) => normalized.search(pattern)).filter((index) => index >= 0),
-    normalized.length
-  );
-  const summary = normalized
-    .slice(0, stop)
-    .replace(/[\s,;:\u2013\u2014-]+$/, '')
-    .trim();
-  return summary.length >= 20 ? summary : normalized;
 }

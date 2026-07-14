@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { formatDate, formatDuration, formatRate, formatTimestamp } from '$lib/format';
+  import { formatDate, formatTimestamp } from '$lib/format';
   import { metricRank } from '$lib/ranking';
   import type { Episode, RankMode } from '$lib/types';
 
@@ -17,8 +17,8 @@
   >
     {#each episodes as episode (episode.guid)}
       {@const rank = metricRank(allEpisodes, episode, mode)}
-      <li class:pending={episode.review.status === 'pending'}>
-        <span class="rank">{rank === null ? 'NR' : String(rank).padStart(2, '0')}</span>
+      <li>
+        <span class="rank">{rank === null ? 'No gstack' : `#${rank}`}</span>
         <div class="episode-identity">
           <span class="episode-meta">
             {episode.episodeNumber !== null ? `Episode ${episode.episodeNumber}` : 'Episode'} /
@@ -26,28 +26,21 @@
           </span>
           <a href={`/episodes/${episode.slug}`}>{episode.title}</a>
         </div>
-        <div class="primary-signal">
-          <span>{mode === 'fastest' ? 'First signal' : 'Total signals'}</span>
-          <strong>
-            {episode.review.status === 'pending'
-              ? 'Pending'
-              : mode === 'fastest'
-                ? formatTimestamp(episode.metrics.firstMentionMs)
-                : episode.metrics.mentionCount}
-          </strong>
+        <div class:active-metric={mode === 'fastest'} class="episode-metric first-mention-metric">
+          <span>First mention</span>
+          <strong>{formatTimestamp(episode.metrics.firstMentionMs)}</strong>
         </div>
-        <dl class="episode-facts">
-          <div><dt>Runtime</dt><dd>{formatDuration(episode.durationSeconds)}</dd></div>
-          <div><dt>Mentions</dt><dd>{episode.review.status === 'pending' ? 'Pending' : episode.metrics.mentionCount}</dd></div>
-          <div><dt>Per hour</dt><dd>{episode.review.status === 'pending' ? 'Pending' : formatRate(episode.metrics.mentionsPerHour)}</dd></div>
-        </dl>
+        <div class:active-metric={mode === 'most'} class="episode-metric mention-count-metric">
+          <span>Total mentions</span>
+          <strong>{episode.metrics.mentionCount}</strong>
+        </div>
       </li>
     {/each}
   </ol>
   {#if episodes.length === 0}
     <div class="empty-state">
-      <strong>No episodes match these filters.</strong>
-      <span>Try clearing the search or selecting a different review state.</span>
+      <strong>No episodes match this search.</strong>
+      <span>Try another title.</span>
     </div>
   {/if}
 </div>

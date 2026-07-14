@@ -47,5 +47,5 @@ export function metricRank(episodes: Episode[], episode: Episode, mode: RankMode
     if (mode === 'fastest') return value !== null && value < (target as number);
     return (value as number) > (target as number);
   });
-  return new Set(better).size + 1;
+  return better.length + 1;
 }

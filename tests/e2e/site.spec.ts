@@ -91,6 +91,22 @@ test('honors the reduced-motion preference', async ({ page }) => {
   ).toBe(0);
 });
 
+test('runs without content security policy violations', async ({ page }) => {
+  const cspViolations: string[] = [];
+  page.on('console', (message) => {
+    if (message.type() === 'error' && message.text().includes('Content Security Policy')) {
+      cspViolations.push(message.text());
+    }
+  });
+
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Most gstack' }).click();
+  await page.getByRole('link', { name: 'We need to talk about gstack' }).click();
+  await expect(page.getByRole('heading', { name: 'We need to talk about gstack' })).toBeVisible();
+
+  expect(cspViolations).toEqual([]);
+});
+
 test('keeps the machine-readable dataset available', async ({ request }) => {
   const response = await request.get('/data/grank.json');
   expect(response.ok()).toBeTruthy();
